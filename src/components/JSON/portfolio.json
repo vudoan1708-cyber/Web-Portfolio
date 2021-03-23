@@ -1,0 +1,163 @@
+{
+  "coding": {
+    "apps": [
+      {
+        "title": "Cerberus",
+        "description": "sdas",
+        "project_type": "Group",
+        "role": "Backend Developer",
+        "images": {
+          "thumbnail": "@/assets/cerberus.png",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [
+          "Golang",
+          "GraphQL"
+        ],
+        "github": "https://github.com/cerberus-security-laboratories/des-wristband-ui",
+        "live_url": "#"
+      },
+
+      {
+        "title": "Muserfly",
+        "description": "An Individual Project Shows Historical Data Of Air Quality, Raises Awareness Of Individual Contributions To Making A Better World Rather Than Sitting Ducks Waiting For Some Miracles",
+        "project_type": "Individual",
+        "role": "Developer",
+        "images": {
+          "thumbnail": "@/assets/aq.png",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [
+          "Vue.js",
+          "p5.js",
+          "Node.js"
+        ],
+        "github": "https://github.com/vudoan1708-cyber/Emotion-Based-Music-Streaming-App-WEB/",
+        "live_url": "https://muserfly.herokuapp.com/#/"
+      },
+
+      {
+        "title": "Air Quality",
+        "description": "An Individual Project Shows Historical Data Of Air Quality, Raises Awareness Of Individual Contributions To Making A Better World Rather Than Sitting Ducks Waiting For Some Miracles",
+        "project_type": "Individual",
+        "role": "Developer",
+        "images": {
+          "thumbnail": "@/assets/aq.png",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [
+          "p5.js",
+          "Node.js",
+          "Mappa.js"
+        ],
+        "github": "https://github.com/vudoan1708-cyber/Air-Quality",
+        "live_url": "https://airpollutants.herokuapp.com/"
+      },
+
+      {
+        "title": "PET Police",
+        "description": "A Group Project About Automation & Anxiety and Information & Control, Which Emulates How Government Uses The Information From Analysing Faces Of The Users",
+        "project_type": "Group",
+        "role": "Lead Developer",
+        "images": {
+          "thumbnail": "@/assets/aq.png",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [
+          "Vanilla Javascript",
+          "face-api.js",
+          "p5.js",
+          "Node.js"
+        ],
+        "github": "https://github.com/vudoan1708-cyber/Creating-With-Data",
+        "live_url": "https://p-e-tpolice.glitch.me/"
+      },
+
+      {
+        "title": "Botanism",
+        "description": "A Project Which Is Meant To Provide General Knowledge of The World of Botany and A Little Bit of Gamification Over The Topic",
+        "project_type": "Individual",
+        "role": "Developer",
+        "images": {
+          "thumbnail": "@/assets/botanism.png",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [
+          "Vanilla Javascript",
+          "Node.js",
+          "Pixi.js"
+        ],
+        "github": "https://github.com/vudoan1708-cyber/Botanism",
+        "live_url": "https://botanism.herokuapp.com/"
+      },
+
+      {
+        "title": "World Holidays",
+        "description": "A Project Which Is Meant To Provide General Knowledge of Holidays Around The World",
+        "project_type": "Individual",
+        "role": "Developer",
+        "images": {
+          "thumbnail": "@/assets/holidays.png",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [
+          "Vanilla Javascript",
+          "Node.js"
+        ],
+        "github": "https://github.com/vudoan1708-cyber/World-Calendar",
+        "live_url": "https://wholidays.glitch.me/"
+      },
+
+      {
+        "title": "Coronavirus",
+        "description": "A Project Project Showcases The Most Current COVID 19 Data (Number of Confirmed Cases, Number of Death Cases, Number of Recovery Cases,...)",
+        "project_type": "Individual",
+        "role": "Developer",
+        "images": {
+          "thumbnail": "@/assets/coronavirus.png",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [
+          "p5.js",
+          "Node.js"
+        ],
+        "github": "https://github.com/vudoan1708-cyber/Coronavirus",
+        "live_url": "https://wwcoronavirus.herokuapp.com/"
+      }
+    ],
+    "games": [
+      {
+        "title": "Birdie Jump!!!",
+        "description": "",
+        "project_type": "Individual",
+        "role": "Developer",
+        "images": {
+          "thumbnail": "@/assets/birdie_jump.png",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [],
+        "github": "",
+        "live_url": ""
+      }
+    ]
+  },
+  "design": {
+
+  }
+}
