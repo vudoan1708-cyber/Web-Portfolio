@@ -1,10 +1,10 @@
 <template>
   <div id="nav">
     <ul id="els">
-      <li class="nav_el" id="home">Home</li>
-      <li class="nav_el" id="portfolio">Portfolio</li>
-      <li class="nav_el" id="blog">Blog</li>
-      <li class="nav_el" id="contact">Resume</li>
+      <li class="nav_el" id="home"><a href="#intro">Home</a></li>
+      <li class="nav_el" id="portfolio"><a href="#content">Portfolio</a></li>
+      <li class="nav_el" id="blog"><a href="#blogs">Blog</a></li>
+      <li class="nav_el" id="contact"><a href="#resume">Resume</a></li>
     </ul>
   </div>
 </template>
@@ -38,6 +38,12 @@ export default {
       color: rgb(218, 218, 218);
       font-size: 1.25rem;
       cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: rgb(218, 218, 218);
+        font-weight: normal;
+      }
     }
   }
 }

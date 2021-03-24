@@ -2,16 +2,16 @@
   <div id="contact">
     <div id="outer_wrapper">
       <div class="img_container" id="mail" @click="openNewTab(Contact.email)">
-        <img src="@/assets/mail.png" />
+        <img src="@/assets/logos/mail.png" />
       </div>
       <div class="img_container" id="youtube" @click="openNewTab(Contact.youtube)">
-        <img src="@/assets/youtube.png" />
+        <img src="@/assets/logos/youtube.png" />
       </div>
       <div class="img_container" id="linkedin" @click="openNewTab(Contact.linkedin)">
-        <img src="@/assets/linkedin.png" />
+        <img src="@/assets/logos/linkedin.png" />
       </div>
       <div class="img_container" id="github" @click="openNewTab(Contact.github)">
-        <img src="@/assets/github.png" />
+        <img src="@/assets/logos/github.png" />
       </div>
     </div>
 
