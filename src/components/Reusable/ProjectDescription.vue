@@ -92,11 +92,11 @@ export default {
 
 <style lang="scss" scoped>
 .descriptions {
-  position: absolute;
+  position: inherit;
   top: 0;
   left: 0;
   color: rgb(44, 44, 44);
-  width: 50%;
+  width: 100%;
   height: 100%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;

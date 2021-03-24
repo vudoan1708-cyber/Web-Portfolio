@@ -14,7 +14,7 @@ export default {
 #blogs {
   display: block;
   position: relative;
-  top: 25%;
+  top: 15%;
   width: 80%;
   padding: 20px;
   color: snow;

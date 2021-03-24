@@ -28,11 +28,11 @@ export default {
 
 <style lang="scss" scoped>
 .display {
-  position: absolute;
+  position: inherit;
   top: 0;
   right: 0;
   background-color: black;
-  width: 50%;
+  width: 100%;
   height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;

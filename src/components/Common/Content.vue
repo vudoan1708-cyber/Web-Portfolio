@@ -36,8 +36,10 @@ export default {
   display: block;
   position: relative;
   top: 15%;
+  left: 0;
   width: 80%;
-  height: 100%;
+  height: auto;
+  min-height: 100% !important;
   padding: 20px;
 }
 </style>
