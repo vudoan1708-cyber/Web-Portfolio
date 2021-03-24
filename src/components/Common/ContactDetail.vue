@@ -1,31 +1,49 @@
 <template>
   <div id="contact">
     <div id="outer_wrapper">
-      <div class="img_container" id="mail">
+      <div class="img_container" id="mail" @click="openNewTab(Contact.email)">
         <img src="@/assets/mail.png" />
       </div>
-      <div class="img_container" id="youtube">
+      <div class="img_container" id="youtube" @click="openNewTab(Contact.youtube)">
         <img src="@/assets/youtube.png" />
       </div>
-      <div class="img_container" id="linkedin">
+      <div class="img_container" id="linkedin" @click="openNewTab(Contact.linkedin)">
         <img src="@/assets/linkedin.png" />
+      </div>
+      <div class="img_container" id="github" @click="openNewTab(Contact.github)">
+        <img src="@/assets/github.png" />
       </div>
     </div>
 
     <Headers />
+    <Footer />
   </div>
 </template>
 
 <script>
+// Common
+import Footer from '@/components/Common/Footer.vue';
+
+// Reusable
 import Headers from '@/components/Reusable/Headers.vue';
+
+// JSON
+import Contact from '@/components/JSON/contact.json';
 
 export default {
   name: 'ContactDetail',
   components: {
     Headers,
+    Footer,
   },
   setup() {
-
+    function openNewTab(tab) {
+      window.open(tab);
+    }
+    return {
+      Contact,
+      openNewTab,
+    };
   },
 };
 </script>

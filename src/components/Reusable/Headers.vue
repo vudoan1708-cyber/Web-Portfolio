@@ -45,6 +45,7 @@ export default {
   margin-top: 30px;
   color: white;
   transition: .2s width;
+  cursor: pointer;
 
   &:hover {
     width: 20%;
