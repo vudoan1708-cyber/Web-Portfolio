@@ -3,11 +3,11 @@
     "apps": [
       {
         "title": "Cerberus",
-        "description": "sdas",
+        "description": "A Group Project Which Aims To Create A Browser-Based Front-end Interface for A&E Wristbands Project Handled By ",
         "project_type": "Group",
         "role": "Backend Developer",
         "images": {
-          "thumbnail": "@/assets/cerberus.png",
+          "thumbnail": "cerberus",
           "progress": [
             ""
           ]
@@ -17,16 +17,24 @@
           "GraphQL"
         ],
         "github": "https://github.com/cerberus-security-laboratories/des-wristband-ui",
-        "live_url": "#"
+        "live_url": "#",
+        "extra_links": {
+          "presentations": [],
+          "videos": []
+        },
+        "organisation": {
+          "name": "The Cerberus Security Laboratories Team",
+          "extra_links": "https://cerberus-laboratories.com/"
+        }
       },
 
       {
         "title": "Muserfly",
-        "description": "An Individual Project Shows Historical Data Of Air Quality, Raises Awareness Of Individual Contributions To Making A Better World Rather Than Sitting Ducks Waiting For Some Miracles",
+        "description": "A Final Year Project which uses Spotify API as the baseline for song searches and audio streaming. The project is an Emotion-Based Music Streaming App which prioritises user's moods to play songs",
         "project_type": "Individual",
-        "role": "Developer",
+        "role": "Lead Developer",
         "images": {
-          "thumbnail": "@/assets/aq.png",
+          "thumbnail": "muserfly",
           "progress": [
             ""
           ]
@@ -37,16 +45,24 @@
           "Node.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Emotion-Based-Music-Streaming-App-WEB/",
-        "live_url": "https://muserfly.herokuapp.com/#/"
+        "live_url": "https://muserfly.herokuapp.com/#/",
+        "extra_links": {
+          "presentations": [],
+          "videos": []
+        },
+        "organisation": {
+          "name": "",
+          "extra_links": ""
+        }
       },
 
       {
         "title": "Air Quality",
         "description": "An Individual Project Shows Historical Data Of Air Quality, Raises Awareness Of Individual Contributions To Making A Better World Rather Than Sitting Ducks Waiting For Some Miracles",
         "project_type": "Individual",
-        "role": "Developer",
+        "role": "Lead Developer",
         "images": {
-          "thumbnail": "@/assets/aq.png",
+          "thumbnail": "aq",
           "progress": [
             ""
           ]
@@ -57,7 +73,15 @@
           "Mappa.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Air-Quality",
-        "live_url": "https://airpollutants.herokuapp.com/"
+        "live_url": "https://airpollutants.herokuapp.com/",
+        "extra_links": {
+          "presentations": [],
+          "videos": []
+        },
+        "organisation": {
+          "name": "",
+          "extra_links": ""
+        }
       },
 
       {
@@ -66,7 +90,7 @@
         "project_type": "Group",
         "role": "Lead Developer",
         "images": {
-          "thumbnail": "@/assets/aq.png",
+          "thumbnail": "profile",
           "progress": [
             ""
           ]
@@ -78,16 +102,24 @@
           "Node.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Creating-With-Data",
-        "live_url": "https://p-e-tpolice.glitch.me/"
+        "live_url": "https://p-e-tpolice.glitch.me/",
+        "extra_links": {
+          "presentations": [],
+          "videos": []
+        },
+        "organisation": {
+          "name": "",
+          "extra_links": ""
+        }
       },
 
       {
         "title": "Botanism",
         "description": "A Project Which Is Meant To Provide General Knowledge of The World of Botany and A Little Bit of Gamification Over The Topic",
         "project_type": "Individual",
-        "role": "Developer",
+        "role": "Lead Developer",
         "images": {
-          "thumbnail": "@/assets/botanism.png",
+          "thumbnail": "botanism",
           "progress": [
             ""
           ]
@@ -98,16 +130,24 @@
           "Pixi.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Botanism",
-        "live_url": "https://botanism.herokuapp.com/"
+        "live_url": "https://botanism.herokuapp.com/",
+        "extra_links": {
+          "presentations": [],
+          "videos": []
+        },
+        "organisation": {
+          "name": "",
+          "extra_links": ""
+        }
       },
 
       {
         "title": "World Holidays",
         "description": "A Project Which Is Meant To Provide General Knowledge of Holidays Around The World",
         "project_type": "Individual",
-        "role": "Developer",
+        "role": "Lead Developer",
         "images": {
-          "thumbnail": "@/assets/holidays.png",
+          "thumbnail": "holidays",
           "progress": [
             ""
           ]
@@ -117,16 +157,24 @@
           "Node.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/World-Calendar",
-        "live_url": "https://wholidays.glitch.me/"
+        "live_url": "https://wholidays.glitch.me/",
+        "extra_links": {
+          "presentations": [],
+          "videos": []
+        },
+        "organisation": {
+          "name": "",
+          "extra_links": ""
+        }
       },
 
       {
-        "title": "Coronavirus",
-        "description": "A Project Project Showcases The Most Current COVID 19 Data (Number of Confirmed Cases, Number of Death Cases, Number of Recovery Cases,...)",
+        "title": "WWCoronavirus",
+        "description": "A Project Showcases and Visualises The Most Current COVID 19 Data (Number of Confirmed Cases, Number of Death Cases, Number of Recovery Cases,...) Around The World",
         "project_type": "Individual",
-        "role": "Developer",
+        "role": "Lead Developer",
         "images": {
-          "thumbnail": "@/assets/coronavirus.png",
+          "thumbnail": "coronavirus",
           "progress": [
             ""
           ]
@@ -136,7 +184,15 @@
           "Node.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Coronavirus",
-        "live_url": "https://wwcoronavirus.herokuapp.com/"
+        "live_url": "https://wwcoronavirus.herokuapp.com/",
+        "extra_links": {
+          "presentations": [],
+          "videos": []
+        },
+        "organisation": {
+          "name": "",
+          "extra_links": ""
+        }
       }
     ],
     "games": [
@@ -144,16 +200,24 @@
         "title": "Birdie Jump!!!",
         "description": "",
         "project_type": "Individual",
-        "role": "Developer",
+        "role": "Lead Developer",
         "images": {
-          "thumbnail": "@/assets/birdie_jump.png",
+          "thumbnail": "birdie_jump",
           "progress": [
             ""
           ]
         },
         "programming_languages": [],
         "github": "",
-        "live_url": ""
+        "live_url": "",
+        "extra_links": {
+          "presentations": [],
+          "videos": []
+        },
+        "organisation": {
+          "name": "",
+          "extra_links": ""
+        }
       }
     ]
   },

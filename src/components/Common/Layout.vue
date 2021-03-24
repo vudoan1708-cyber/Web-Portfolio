@@ -2,6 +2,8 @@
   <div id="layout">
     <Introduction />
     <Content :apps="apps" />
+    <!-- <Blogs /> -->
+    <!-- <Resume /> -->
   </div>
 </template>
 
@@ -10,6 +12,8 @@ import { onBeforeMount, ref } from 'vue';
 
 import Introduction from '@/components/Common/Introduction.vue';
 import Content from '@/components/Common/Content.vue';
+// import Blogs from '@/components/Common/Blogs.vue';
+// import Resume from '@/components/Common/Resume.vue';
 
 // JSON
 import Portfolio from '@/components/JSON/portfolio.json';
@@ -19,6 +23,8 @@ export default {
   components: {
     Introduction,
     Content,
+    // Blogs,
+    // Resume,
   },
   setup() {
     // Apps

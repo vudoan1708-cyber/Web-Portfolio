@@ -1,6 +1,8 @@
 <template>
   <div id="content">
-    <Projects :apps="appsProps" />
+    <transition name="fade">
+      <Projects :apps="appsProps" />
+    </transition>
   </div>
 </template>
 
@@ -33,7 +35,7 @@ export default {
 #content {
   display: block;
   position: relative;
-  top: 25%;
+  top: 15%;
   width: 80%;
   height: 100%;
   padding: 20px;

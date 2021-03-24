@@ -1,7 +1,5 @@
 <template>
-  <div id="resume">
-    <h2>Resume Section</h2>
-  </div>
+  <div id="message"></div>
 </template>
 
 <script>

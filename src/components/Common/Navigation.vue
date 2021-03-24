@@ -37,6 +37,7 @@ export default {
       margin: 20px;
       color: rgb(218, 218, 218);
       font-size: 1.25rem;
+      cursor: pointer;
     }
   }
 }
