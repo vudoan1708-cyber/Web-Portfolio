@@ -1,15 +1,21 @@
 <template>
-  <div class="headers" v-for="(title, titleKey) in titles.portfolio" :key="titleKey">
-    <h2>{{ title }}</h2>
+  <div class="headers" v-for="(title, titleKey) in titles.portfolio" :key="titleKey"
+    @click="changeView(title)">
+    <a href="#content">
+      <h2>{{ title }}</h2>
+    </a>
     <hr />
   </div>
 </template>
 
 <script>
-import { onBeforeMount, reactive } from 'vue';
+import { onBeforeMount, reactive, ref } from 'vue';
 
 // JSON
 import Headers from '@/components/JSON/headers.json';
+
+// Plugin
+import { useStore } from '@/components/Utils/plugin';
 
 export default {
   name: 'Headers',
@@ -18,6 +24,16 @@ export default {
       portfolio: [],
       blog: [],
     });
+
+    // Emitter
+    const emitter = ref(useStore('emitter'));
+
+    // Code or Design
+    function changeView(title) {
+      if (!emitter.value.err) {
+        emitter.value.store.emit('portfolio_view', title);
+      }
+    }
 
     onBeforeMount(() => {
       Headers.portfolio.forEach((header) => {
@@ -30,6 +46,7 @@ export default {
 
     return {
       titles,
+      changeView,
     };
   },
 };
@@ -46,6 +63,11 @@ export default {
   color: white;
   transition: .2s width;
   cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: white !important;
+  }
 
   &:hover {
     width: 20%;

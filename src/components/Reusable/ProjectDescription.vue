@@ -2,24 +2,32 @@
   <div class="descriptions">
     <h2>{{ projectDetails.title }}</h2>
     <div class="details">
-      <h4>Description: </h4>
-        <p>{{ projectDetails.description }}
-          <a v-if="projectDetails.orgExtraLink !== ''"
-            :href="projectDetails.orgExtraLink"
-            target="_blank">{{ projectDetails.orgName }}
-          </a>
-        </p> <br />
+      <section>
+        <h4>Description: </h4>
+          <p>{{ projectDetails.description }}
+            <a v-if="projectDetails.orgExtraLink !== ''"
+              :href="projectDetails.orgExtraLink"
+              target="_blank">{{ projectDetails.orgName }}
+            </a>
+          </p> <br />
+      </section>
 
-      <h4>Project Type: </h4>
-        <p>{{ projectDetails.projectType }}</p> <br />
+      <section>
+        <h4>Project Type: </h4>
+          <p>{{ projectDetails.projectType }}</p> <br />
+      </section>
 
-      <h4>Role: </h4>
-        <p>{{ projectDetails.role }}</p> <br />
+      <section>
+        <h4>Role: </h4>
+          <p>{{ projectDetails.role }}</p> <br />
+      </section>
 
-      <h4>Programming Languages: </h4>
-        <p v-for="(lang, langKey) in projectDetails.programmingLangs"
-          :key="langKey">{{ lang }}
-        </p> <br />
+      <section v-if="projectDetails.programmingLangs.length > 0">
+        <h4>Programming Languages: </h4>
+          <p v-for="(lang, langKey) in projectDetails.programmingLangs"
+            :key="langKey">{{ lang }}
+          </p> <br />
+      </section>
 
       <!-- <h4>Github Link: </h4>
         <p>{{ projectDetails.githubURL }}</p> <br />
@@ -31,7 +39,7 @@
 </template>
 
 <script>
-import { reactive } from 'vue';
+import { reactive, watch } from 'vue';
 
 export default {
   name: 'ProjectDescription',
@@ -81,6 +89,25 @@ export default {
       title: props.title,
       orgName: props.orgName,
       orgExtraLink: props.orgExtraLink,
+    });
+
+    watch(() => [
+      props.description, props.githubURL, props.liveURL, props.programmingLangs,
+      props.projectType, props.role, props.title, props.orgName, props.orgExtraLink,
+    ],
+    ([
+      desc, githubURL, liveURL, programmingLangs,
+      projectType, role, title, orgName, orgExtraLink,
+    ]) => {
+      projectDetails.description = desc;
+      projectDetails.githubURL = githubURL;
+      projectDetails.liveURL = liveURL;
+      projectDetails.programmingLangs = programmingLangs;
+      projectDetails.projectType = projectType;
+      projectDetails.role = role;
+      projectDetails.title = title;
+      projectDetails.orgName = orgName;
+      projectDetails.orgExtraLink = orgExtraLink;
     });
 
     return {

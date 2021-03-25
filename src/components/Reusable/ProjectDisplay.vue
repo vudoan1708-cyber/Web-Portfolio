@@ -5,10 +5,7 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-
-// Images
-// import Cerberus from '@/assets/cerberus.png';
+import { ref, watch } from 'vue';
 
 export default {
   name: 'ProjectDisplay',
@@ -19,6 +16,11 @@ export default {
   },
   setup(props) {
     const images = ref((props.image));
+
+    watch(() => (props.image), (data) => {
+      images.value = data;
+    });
+
     return {
       images,
     };
@@ -36,6 +38,7 @@ export default {
   height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  overflow: hidden;
 
   img {
     position: relative;

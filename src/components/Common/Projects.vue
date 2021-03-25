@@ -1,18 +1,18 @@
 <template>
-  <div class="project_wrapper" v-for="(app, appKey) in appsProp" :key="appKey">
-      <div class="grid_display" @click="openWindow(app.live_url)">
-        <ProjectDescription :description="app.description" :githubURL="app.github"
-          :liveURL="app.live_url" :programmingLangs="app.programming_languages"
-          :projectType="app.project_type" :role="app.role" :title="app.title"
-          :videos="app.extra_links.videos" :presentations="app.extra_links.presentations"
-          :orgName="app.organisation.name" :orgExtraLink="app.organisation.extra_links" />
-        <ProjectDisplay :image="app.images.thumbnail" />
+  <div class="project_wrapper" v-for="(project, projectKey) in projectsProp" :key="projectKey">
+      <div class="grid_display" @click="openWindow(project.live_url)">
+        <ProjectDescription :description="project.description" :githubURL="project.github"
+          :liveURL="project.live_url" :programmingLangs="project.programming_languages"
+          :projectType="project.project_type" :role="project.role" :title="project.title"
+          :videos="project.extra_links.videos" :presentations="project.extra_links.presentations"
+          :orgName="project.organisation.name" :orgExtraLink="project.organisation.extra_links" />
+        <ProjectDisplay :image="project.images.thumbnail" />
       </div>
   </div>
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 import ProjectDescription from '@/components/Reusable/ProjectDescription.vue';
 import ProjectDisplay from '@/components/Reusable/ProjectDisplay.vue';
@@ -20,7 +20,7 @@ import ProjectDisplay from '@/components/Reusable/ProjectDisplay.vue';
 export default {
   name: 'Projects',
   props: {
-    apps: {
+    projects: {
       type: Array,
     },
   },
@@ -29,14 +29,19 @@ export default {
     ProjectDisplay,
   },
   setup(props) {
-    const appsProp = ref(props.apps);
+    const projectsProp = ref(props.projects);
 
     function openWindow(url) {
       // eslint-disable-next-line no-unused-expressions
       url !== '#' ? window.open(url) : undefined;
     }
+
+    watch(() => (props.projects), (data) => {
+      projectsProp.value = data;
+    });
+
     return {
-      appsProp,
+      projectsProp,
       openWindow,
     };
   },

@@ -1,14 +1,23 @@
 <template>
   <div id="intro">
-    <h1>VU DOAN</h1>
-    <p>I'm a Digital Media professional, who takes profound interests in 3D modelling
-    and Full-stack Web Development</p>
+    <h1>{{ Intro.name }}</h1>
+    <div class="intro_contents" v-for="(content, contentKey) in Intro.content" :key="contentKey">
+      <p>{{ content }}</p>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+// JSON
+import Intro from '@/components/JSON/introduction.json';
 
+export default {
+  name: 'Introduction',
+  setup() {
+    return {
+      Intro,
+    };
+  },
 };
 </script>
 
@@ -20,5 +29,11 @@ export default {
   width: 80%;
   padding: 20px;
   color: snow;
+
+  .intro_contents {
+    text-align: left;
+    margin: 10px;
+    padding: 5px;
+  }
 }
 </style>

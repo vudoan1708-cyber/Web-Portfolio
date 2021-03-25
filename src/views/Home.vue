@@ -1,20 +1,21 @@
 <template>
   <div class="home">
-    <Headers />
     <Navigation />
-    <Layout />
+    <Layout :emitter="emitter" />
     <ContactDetail />
   </div>
 </template>
 
 <script>
+import { getCurrentInstance } from 'vue';
+
 // Common
 import Navigation from '@/components/Common/Navigation.vue';
 import Layout from '@/components/Common/Layout.vue';
 import ContactDetail from '@/components/Common/ContactDetail.vue';
 
-// Reusable
-import Headers from '@/components/Reusable/Headers.vue';
+// Plugin
+import { provideStore } from '@/components/Utils/plugin';
 
 export default {
   name: 'Home',
@@ -22,7 +23,17 @@ export default {
     Navigation,
     Layout,
     ContactDetail,
-    Headers,
+  },
+  setup() {
+    // instantiate the app's current instance to get global properties
+    // registered in the main.js file
+    const app = getCurrentInstance();
+    const emitter = app.appContext.config.globalProperties.$emitter;
+
+    provideStore('emitter', emitter);
+    return {
+      emitter,
+    };
   },
 };
 </script>

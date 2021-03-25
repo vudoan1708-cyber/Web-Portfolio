@@ -6,8 +6,14 @@
       <div class="public_date">
         <i>{{ content.date_of_publication }}</i>
       </div>
-      <section class="contents">
-        <p>{{ content.content }}</p>
+      <section class="contents"
+        v-for="(desc, descKey) in content.description" :key="descKey">
+        <p>{{ desc }}</p>
+        <div v-if="content.external_link !== '' && descKey === content.description.length - 1">
+          <a :href="content.external_link" target="_blank">
+            {{ content.part_of }}
+          </a>
+        </div>
       </section>
     </div>
   </div>
@@ -52,9 +58,10 @@ export default {
     }
 
     .contents {
-      margin: 10px;
+      margin: 0 10px;
       padding: 20px;
       text-align: left;
+      line-height: 1.4;
     }
   }
 }

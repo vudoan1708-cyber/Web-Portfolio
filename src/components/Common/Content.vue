@@ -1,20 +1,20 @@
 <template>
   <div id="content">
-    <transition name="fade">
-      <Projects :apps="appsProps" />
-    </transition>
+    <!-- <transition name="fade"> -->
+      <Projects :projects="projectsProps" />
+    <!-- </transition> -->
   </div>
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 import Projects from '@/components/Common/Projects.vue';
 
 export default {
   name: 'Content',
   props: {
-    apps: {
+    projects: {
       type: Array,
     },
   },
@@ -22,10 +22,14 @@ export default {
     Projects,
   },
   setup(props) {
-    const appsProps = ref(props.apps);
+    const projectsProps = ref(props.projects);
+
+    watch(() => props.projects, (data) => {
+      projectsProps.value = data;
+    });
 
     return {
-      appsProps,
+      projectsProps,
     };
   },
 };

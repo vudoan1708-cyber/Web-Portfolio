@@ -18,9 +18,19 @@
         ],
         "github": "https://github.com/cerberus-security-laboratories/des-wristband-ui",
         "live_url": "https://www.figma.com/file/EcwYNHUPsIgt0DMMcQnmJi/A%26E-wristbands-interface?node-id=0%3A1",
+        "apis": [
+          {
+            "name": "",
+            "link": ""
+          }
+        ],
         "extra_links": {
           "presentations": [],
-          "videos": []
+          "videos": [],
+          "project_log": "https://uweacuk-my.sharepoint.com/:w:/g/personal/donata2_lesiak_live_uwe_ac_uk/ERWV12I6QPlIisqpF1Ixwx4BzL2bAzjQMZLGnJfrqSWFyA?rtime=nnuZqhvZ2Eg",
+          "reports": [],
+          "demo_video": "",
+          "final_video": ""
         },
         "organisation": {
           "name": "The Cerberus Security Laboratories Team",
@@ -46,9 +56,19 @@
         ],
         "github": "https://github.com/vudoan1708-cyber/Emotion-Based-Music-Streaming-App-WEB/",
         "live_url": "https://muserfly.herokuapp.com/#/",
+        "apis": [
+          {
+            "name": "Spotify API",
+            "link": "https://developer.spotify.com/documentation/web-api/reference/"
+          }
+        ],
         "extra_links": {
           "presentations": [],
-          "videos": []
+          "videos": [],
+          "project_log": "https://padlet.com/vudoan1708/qd6y7h6tys92exi6",
+          "reports": [],
+          "demo_video": "",
+          "final_video": ""
         },
         "organisation": {
           "name": "",
@@ -74,9 +94,19 @@
         ],
         "github": "https://github.com/vudoan1708-cyber/Air-Quality",
         "live_url": "https://airpollutants.herokuapp.com/",
+        "apis": [
+          {
+            "name": "OpenAQ",
+            "link": "https://docs.openaq.org/"
+          }
+        ],
         "extra_links": {
           "presentations": [],
-          "videos": []
+          "videos": [],
+          "project_log": "",
+          "reports": [],
+          "demo_video": "",
+          "final_video": ""
         },
         "organisation": {
           "name": "",
@@ -103,9 +133,19 @@
         ],
         "github": "https://github.com/vudoan1708-cyber/Creating-With-Data",
         "live_url": "https://p-e-tpolice.glitch.me/",
+        "apis": [
+          {
+            "name": "",
+            "link": ""
+          }
+        ],
         "extra_links": {
           "presentations": [],
-          "videos": []
+          "videos": [],
+          "project_log": "",
+          "reports": [],
+          "demo_video": "",
+          "final_video": ""
         },
         "organisation": {
           "name": "",
@@ -131,9 +171,27 @@
         ],
         "github": "https://github.com/vudoan1708-cyber/Botanism",
         "live_url": "https://botanism.herokuapp.com/",
+        "apis": [
+          {
+            "name": "Trefle API",
+            "link": "https://trefle.io/"
+          },
+          {
+            "name": "Edamam API",
+            "link": "https://developer.edamam.com/edamam-docs-recipe-api"
+          },
+          {
+            "name": "Wikipedia API",
+            "link": "https://www.mediawiki.org/wiki/API:Main_page"
+          }
+        ],
         "extra_links": {
           "presentations": [],
-          "videos": []
+          "videos": [],
+          "project_log": "",
+          "reports": [],
+          "demo_video": "",
+          "final_video": ""
         },
         "organisation": {
           "name": "",
@@ -158,9 +216,27 @@
         ],
         "github": "https://github.com/vudoan1708-cyber/World-Calendar",
         "live_url": "https://wholidays.glitch.me/",
+        "apis": [
+          {
+            "name": "Calendarific API",
+            "link": "https://calendarific.com/api-documentation"
+          },
+          {
+            "name": "Google Maps API (Geocoding)",
+            "link": "https://developers.google.com/maps/documentation/geocoding/start"
+          },
+          {
+            "name": "Rest Countries API",
+            "link": "https://restcountries.eu/"
+          }
+        ],
         "extra_links": {
           "presentations": [],
-          "videos": []
+          "videos": [],
+          "project_log": "",
+          "reports": [],
+          "demo_video": "",
+          "final_video": ""
         },
         "organisation": {
           "name": "",
@@ -185,9 +261,19 @@
         ],
         "github": "https://github.com/vudoan1708-cyber/Coronavirus",
         "live_url": "https://wwcoronavirus.herokuapp.com/",
+        "apis": [
+          {
+            "name": "Covid19 API",
+            "link": "https://documenter.getpostman.com/view/10808728/SzS8rjbc"
+          }
+        ],
         "extra_links": {
           "presentations": [],
-          "videos": []
+          "videos": [],
+          "project_log": "",
+          "reports": [],
+          "demo_video": "",
+          "final_video": ""
         },
         "organisation": {
           "name": "",
@@ -210,9 +296,19 @@
         "programming_languages": [],
         "github": "",
         "live_url": "",
+        "apis": [
+          {
+            "name": "",
+            "link": ""
+          }
+        ],
         "extra_links": {
           "presentations": [],
-          "videos": []
+          "videos": [],
+          "project_log": "",
+          "reports": [],
+          "demo_video": "",
+          "final_video": ""
         },
         "organisation": {
           "name": "",
@@ -221,7 +317,73 @@
       }
     ]
   },
-  "design": {
+  "design": [
+    {
+      "title": "3D Modelling",
+      "description": "A separate portfolio website to showcase my 3D art projects which are made using primarily 3D packages such as Maya, ZBrush, Substance Painter, and other compositing softwares such as Photoshop, After Effects...",
+      "project_type": "Individual",
+      "role": "3D Artist",
+      "images": {
+        "thumbnail": "3d",
+        "progress": [
+          ""
+        ]
+      },
+      "programming_languages": [],
+      "github": "",
+      "live_url": "https://vudoan387.blogspot.com/",
+      "apis": [
+        {
+          "name": "",
+          "link": ""
+        }
+      ],
+      "extra_links": {
+        "presentations": [],
+        "videos": [],
+        "project_log": "https://uweacuk-my.sharepoint.com/:w:/g/personal/donata2_lesiak_live_uwe_ac_uk/ERWV12I6QPlIisqpF1Ixwx4BzL2bAzjQMZLGnJfrqSWFyA?rtime=nnuZqhvZ2Eg",
+        "reports": [],
+        "demo_video": "",
+        "final_video": ""
+      },
+      "organisation": {
+        "name": "",
+        "extra_links": ""
+      }
+    },
 
-  }
+    {
+      "title": "3D Printing",
+      "description": "A separate portfolio website to showcase all the 3D printing and laser cutting artefacts which are usually a part of a technology project (Arduino, Frontend Browser Based Interface,...). These projects are made available thanks to 3D packages such as Maya, Rhino, MakerBot Print, and other hardware facilities such as MakerBot Replicator+ 3D, Epilog Legend",
+      "project_type": "Individual",
+      "role": "3D Artist",
+      "images": {
+        "thumbnail": "3d_printing",
+        "progress": [
+          ""
+        ]
+      },
+      "programming_languages": [],
+      "github": "",
+      "live_url": "https://vudoan3dprinting387.blogspot.com/",
+      "apis": [
+        {
+          "name": "",
+          "link": ""
+        }
+      ],
+      "extra_links": {
+        "presentations": [],
+        "videos": [],
+        "project_log": "https://uweacuk-my.sharepoint.com/:w:/g/personal/donata2_lesiak_live_uwe_ac_uk/ERWV12I6QPlIisqpF1Ixwx4BzL2bAzjQMZLGnJfrqSWFyA?rtime=nnuZqhvZ2Eg",
+        "reports": [],
+        "demo_video": "",
+        "final_video": ""
+      },
+      "organisation": {
+        "name": "T",
+        "extra_links": ""
+      }
+    }
+  ]
 }
