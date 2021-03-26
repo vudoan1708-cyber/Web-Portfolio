@@ -2,7 +2,7 @@
   <div class="home">
     <Navigation />
     <Layout :emitter="emitter" />
-    <ContactDetail />
+    <ContactDetail :emitter="emitter" />
   </div>
 </template>
 

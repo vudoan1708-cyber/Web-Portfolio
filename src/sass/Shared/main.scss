@@ -32,11 +32,11 @@ html {
 /* width of the entire scrollbar */
 ::-webkit-scrollbar,
 ::-webkit-scrollbar { /* Chrome/Opera/Safari */
-    width: 5px;
+    width: 0;
 }
 ::-moz-scrollbar,
 ::-webkit-scrollbar { /* Firefox 19+ */
-    width: 5px;
+    width: 0;
 }
 
 // Transition for Vue Template

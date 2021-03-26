@@ -10,6 +10,7 @@
   "dependencies": {
     "@vue/runtime-core": "^3.0.5",
     "core-js": "^3.6.5",
+    "emailjs-com": "^2.6.4",
     "mitt": "^2.1.0",
     "scrollmagic": "^2.0.8",
     "vue": "^3.0.0",

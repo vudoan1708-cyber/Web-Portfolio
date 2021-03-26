@@ -1,7 +1,7 @@
 <template>
   <div id="contact">
     <div id="outer_wrapper">
-      <div class="img_container" id="mail" @click="openNewTab(Contact.email)">
+      <div class="img_container" id="mail" @click="createNewScreen(Contact.email)">
         <img src="@/assets/logos/mail.png" />
       </div>
       <div class="img_container" id="youtube" @click="openNewTab(Contact.youtube)">
@@ -32,17 +32,29 @@ import Contact from '@/components/JSON/contact.json';
 
 export default {
   name: 'ContactDetail',
+  props: {
+    emitter: {
+      type: Object,
+    },
+  },
   components: {
     Headers,
     Footer,
   },
-  setup() {
+  setup(props) {
     function openNewTab(tab) {
       window.open(tab);
+    }
+
+    // Email
+    function createNewScreen(email) {
+      // Open up Email Screen
+      props.emitter.emit('email_screen', email);
     }
     return {
       Contact,
       openNewTab,
+      createNewScreen,
     };
   },
 };

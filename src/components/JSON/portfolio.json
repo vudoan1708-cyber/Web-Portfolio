@@ -26,7 +26,11 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [],
+          "videos": [
+            {
+              
+            }
+          ],
           "project_log": "https://uweacuk-my.sharepoint.com/:w:/g/personal/donata2_lesiak_live_uwe_ac_uk/ERWV12I6QPlIisqpF1Ixwx4BzL2bAzjQMZLGnJfrqSWFyA?rtime=nnuZqhvZ2Eg",
           "reports": [],
           "demo_video": "",
@@ -64,7 +68,11 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [],
+          "videos": [
+            {
+              
+            }
+          ],
           "project_log": "https://padlet.com/vudoan1708/qd6y7h6tys92exi6",
           "reports": [],
           "demo_video": "",
@@ -102,9 +110,67 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [],
+          "videos": [
+            {
+              
+            }
+          ],
           "project_log": "",
           "reports": [],
+          "demo_video": "",
+          "final_video": ""
+        },
+        "organisation": {
+          "name": "",
+          "extra_links": ""
+        }
+      },
+
+      {
+        "title": "Echo Architect",
+        "description": "A Group Project That Was Created Based On A Playful Connection Theme, Which Combined Design, Software, Hardware and Programming Skills. Within The First Four Months (1st semester), We Conducted User Research (Interviews) Based On Our Ideas, 3D Visualised Potential Looks of The Final Physical Prototype. In The Second Semester, We Started The Design and Build of The Physical Prototype, Created Front-end Web Presence and System, Developed Real-time Machine Communication and Server Logic, and Finally, Wrote A Design and Evaluation Report",
+        "project_type": "Group",
+        "role": "Backend Developer & 3D modeller",
+        "images": {
+          "thumbnail": "echo_architect",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [
+          "Node.js",
+          "socket.io"
+        ],
+        "github": "https://github.com/spikethea/echo_architect",
+        "live_url": "http://quincegorerodney.panel.uwe.ac.uk/echo-architect/",
+        "apis": [],
+        "extra_links": {
+          "presentations": [],
+          "videos": [
+            {
+              "name": "A Video Showcased Proof of Concept",
+              "link": "https://www.youtube.com/watch?v=oxfEUbGulws"
+            },
+            {
+              "name": "Demo Video",
+              "link": "https://www.youtube.com/watch?v=Qw-OJ1nJhOA"
+            }
+          ],
+          "project_log": "http://vudoan.panel.uwe.ac.uk/IoE/Gantt%20Chart.pdf",
+          "reports": [
+            {
+              "name": "Design Pitch",
+              "link": "http://vudoan.panel.uwe.ac.uk/IoE/Design%20Pitch%20Document.pdf"
+            },
+            {
+              "name": "Technical Specification",
+              "link": "http://vudoan.panel.uwe.ac.uk/IoE/Technical%20Specification.pdf"
+            },
+            {
+              "name": "Individual Report",
+              "link": "http://vudoan.panel.uwe.ac.uk/IoE/IoE-Report.pdf"
+            }
+          ],
           "demo_video": "",
           "final_video": ""
         },
@@ -141,7 +207,11 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [],
+          "videos": [
+            {
+              
+            }
+          ],
           "project_log": "",
           "reports": [],
           "demo_video": "",
@@ -187,7 +257,11 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [],
+          "videos": [
+            {
+              
+            }
+          ],
           "project_log": "",
           "reports": [],
           "demo_video": "",
@@ -232,7 +306,11 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [],
+          "videos": [
+            {
+              
+            }
+          ],
           "project_log": "",
           "reports": [],
           "demo_video": "",
@@ -269,7 +347,11 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [],
+          "videos": [
+            {
+              
+            }
+          ],
           "project_log": "",
           "reports": [],
           "demo_video": "",
@@ -304,7 +386,11 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [],
+          "videos": [
+            {
+              
+            }
+          ],
           "project_log": "",
           "reports": [],
           "demo_video": "",
@@ -340,8 +426,12 @@
       ],
       "extra_links": {
         "presentations": [],
-        "videos": [],
-        "project_log": "https://uweacuk-my.sharepoint.com/:w:/g/personal/donata2_lesiak_live_uwe_ac_uk/ERWV12I6QPlIisqpF1Ixwx4BzL2bAzjQMZLGnJfrqSWFyA?rtime=nnuZqhvZ2Eg",
+        "videos": [
+          {
+            
+          }
+        ],
+        "project_log": "",
         "reports": [],
         "demo_video": "",
         "final_video": ""
@@ -353,10 +443,10 @@
     },
 
     {
-      "title": "3D Printing",
-      "description": "A separate portfolio website to showcase all the 3D printing and laser cutting artefacts which are usually a part of a technology project (Arduino, Frontend Browser Based Interface,...). These projects are made available thanks to 3D packages such as Maya, Rhino, MakerBot Print, and other hardware facilities such as MakerBot Replicator+ 3D, Epilog Legend",
-      "project_type": "Individual",
-      "role": "3D Artist",
+      "title": "3D Printing & Laser Cutting",
+      "description": "A separate portfolio website to showcase all the 3D printed and laser cut artefacts which are usually a part of a technology project (Arduino, Frontend Browser Based Interface,...). These artefacts are made available thanks to 3D packages such as Maya, Rhino, MakerBot Print, and other hardware facilities such as MakerBot Replicator+ 3D, Epilog Legend",
+      "project_type": "Depends",
+      "role": "3D Modeller",
       "images": {
         "thumbnail": "3d_printing",
         "progress": [
@@ -374,8 +464,12 @@
       ],
       "extra_links": {
         "presentations": [],
-        "videos": [],
-        "project_log": "https://uweacuk-my.sharepoint.com/:w:/g/personal/donata2_lesiak_live_uwe_ac_uk/ERWV12I6QPlIisqpF1Ixwx4BzL2bAzjQMZLGnJfrqSWFyA?rtime=nnuZqhvZ2Eg",
+        "videos": [
+          {
+            
+          }
+        ],
+        "project_log": "",
         "reports": [],
         "demo_video": "",
         "final_video": ""
