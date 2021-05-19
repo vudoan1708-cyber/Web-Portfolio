@@ -14,7 +14,8 @@
         },
         "programming_languages": [
           "Golang",
-          "GraphQL"
+          "GraphQL",
+          "Python"
         ],
         "github": "https://github.com/cerberus-security-laboratories/des-wristband-ui",
         "live_url": "https://www.figma.com/file/EcwYNHUPsIgt0DMMcQnmJi/A%26E-wristbands-interface?node-id=0%3A1",
@@ -44,7 +45,7 @@
 
       {
         "title": "Muserfly",
-        "description": "A Final Year Project which uses Spotify API as the baseline for song searches and audio streaming. The project is an Emotion-Based Music Streaming App which prioritises user's moods to play songs",
+        "description": "A Final Year Project which uses Spotify API as the baseline for song searches and audio streaming. The project is an Emotion-Based Music Streaming App which prioritises user's moods to play songs. It is also used to speculatively propose a potentially new screen-based behaviour using a map for content discovery",
         "project_type": "Individual",
         "role": "Lead Developer",
         "images": {
@@ -56,6 +57,7 @@
         "programming_languages": [
           "Vue.js",
           "p5.js",
+          "D3.js",
           "Node.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Emotion-Based-Music-Streaming-App-WEB/",
@@ -74,6 +76,41 @@
             }
           ],
           "project_log": "https://padlet.com/vudoan1708/qd6y7h6tys92exi6",
+          "reports": [],
+          "demo_video": "",
+          "final_video": ""
+        },
+        "organisation": {
+          "name": "",
+          "extra_links": ""
+        }
+      },
+
+      {
+        "title": "Vu + Sloth (Vloth)",
+        "description": "An Artificial Intelligence project using a method called Generative Adversarial Network (GAN), particularly StyleGAN2-ADA with a pretrained model on human faces, to train a custom model which can blend features of my face and sloth's face",
+        "project_type": "Individual",
+        "role": "Lead Developer",
+        "images": {
+          "thumbnail": "AI(GAN)",
+          "progress": [
+            ""
+          ]
+        },
+        "programming_languages": [
+          "Python (Tensorflow)"
+        ],
+        "github": "https://github.com/vudoan1708-cyber/Vu-Sloth",
+        "live_url": "#",
+        "apis": [],
+        "extra_links": {
+          "presentations": [],
+          "videos": [
+            {
+              
+            }
+          ],
+          "project_log": "",
           "reports": [],
           "demo_video": "",
           "final_video": ""
@@ -444,7 +481,7 @@
 
     {
       "title": "3D Printing & Laser Cutting",
-      "description": "A separate portfolio website to showcase all the 3D printed and laser cut artefacts which are usually a part of a technology project (Arduino, Frontend Browser Based Interface,...). These artefacts are made available thanks to 3D packages such as Maya, Rhino, MakerBot Print, and other hardware facilities such as MakerBot Replicator+ 3D, Epilog Legend",
+      "description": "A separate portfolio website to showcase all the 3D printed and laser cut artefacts which are usually a part of a technology project (Arduino, Physical Computing and Frontend Browser Based Interface,...). These artefacts are made available thanks to 3D packages such as Maya, Rhino, MakerBot Print, and other hardware facilities such as MakerBot Replicator+ 3D, Epilog Legend",
       "project_type": "Depends",
       "role": "3D Modeller",
       "images": {

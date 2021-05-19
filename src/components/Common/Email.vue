@@ -90,9 +90,11 @@ export default {
             }
           }, (error) => {
             emitter.value.store.emit('email_screen', error);
+            loadingRef.value.style.display = 'none';
           });
       } catch (err) {
         emitter.value.store.emit('email_screen', err);
+        loadingRef.value.style.display = 'none';
       }
     }
 

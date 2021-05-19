@@ -135,6 +135,8 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     box-shadow: inset 0 0 2000px rgba(248, 0, 0, 0.5);
     filter: blur(5px);
     z-index: -10;
