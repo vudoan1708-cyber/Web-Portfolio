@@ -27,15 +27,9 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [
-            {
-              
-            }
-          ],
+          "videos": [],
           "project_log": "https://uweacuk-my.sharepoint.com/:w:/g/personal/donata2_lesiak_live_uwe_ac_uk/ERWV12I6QPlIisqpF1Ixwx4BzL2bAzjQMZLGnJfrqSWFyA?rtime=nnuZqhvZ2Eg",
-          "reports": [],
-          "demo_video": "",
-          "final_video": ""
+          "reports": []
         },
         "organisation": {
           "name": "The Cerberus Security Laboratories Team",
@@ -72,13 +66,21 @@
           "presentations": [],
           "videos": [
             {
-              
+              "name": "Demo Video",
+              "link": "https://www.youtube.com/watch?v=GDZOgYXMtoU"
+            },
+            {
+              "name": "Final Video",
+              "link": "https://www.youtube.com/watch?v=LFQIMeK7dqw"
             }
           ],
           "project_log": "https://padlet.com/vudoan1708/qd6y7h6tys92exi6",
-          "reports": [],
-          "demo_video": "",
-          "final_video": ""
+          "reports": [
+            {
+              "name": "Final Report",
+              "link": "http://vudoan.panel.uwe.ac.uk/IoE/Design%20Pitch%20Document.pdf"
+            }
+          ]
         },
         "organisation": {
           "name": "",
@@ -101,19 +103,13 @@
           "Python (Tensorflow)"
         ],
         "github": "https://github.com/vudoan1708-cyber/Vu-Sloth",
-        "live_url": "#",
+        "live_url": "",
         "apis": [],
         "extra_links": {
           "presentations": [],
-          "videos": [
-            {
-              
-            }
-          ],
+          "videos": [],
           "project_log": "",
-          "reports": [],
-          "demo_video": "",
-          "final_video": ""
+          "reports": []
         },
         "organisation": {
           "name": "",
@@ -147,15 +143,9 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [
-            {
-              
-            }
-          ],
+          "videos": [],
           "project_log": "",
-          "reports": [],
-          "demo_video": "",
-          "final_video": ""
+          "reports": []
         },
         "organisation": {
           "name": "",
@@ -207,9 +197,7 @@
               "name": "Individual Report",
               "link": "http://vudoan.panel.uwe.ac.uk/IoE/IoE-Report.pdf"
             }
-          ],
-          "demo_video": "",
-          "final_video": ""
+          ]
         },
         "organisation": {
           "name": "",
@@ -244,15 +232,9 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [
-            {
-              
-            }
-          ],
+          "videos": [],
           "project_log": "",
-          "reports": [],
-          "demo_video": "",
-          "final_video": ""
+          "reports": []
         },
         "organisation": {
           "name": "",
@@ -294,15 +276,9 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [
-            {
-              
-            }
-          ],
+          "videos": [],
           "project_log": "",
-          "reports": [],
-          "demo_video": "",
-          "final_video": ""
+          "reports": []
         },
         "organisation": {
           "name": "",
@@ -343,15 +319,9 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [
-            {
-              
-            }
-          ],
+          "videos": [],
           "project_log": "",
-          "reports": [],
-          "demo_video": "",
-          "final_video": ""
+          "reports": []
         },
         "organisation": {
           "name": "",
@@ -384,15 +354,9 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [
-            {
-              
-            }
-          ],
+          "videos": [],
           "project_log": "",
-          "reports": [],
-          "demo_video": "",
-          "final_video": ""
+          "reports": []
         },
         "organisation": {
           "name": "",
@@ -423,15 +387,9 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [
-            {
-              
-            }
-          ],
+          "videos": [],
           "project_log": "",
-          "reports": [],
-          "demo_video": "",
-          "final_video": ""
+          "reports": []
         },
         "organisation": {
           "name": "",
@@ -463,15 +421,9 @@
       ],
       "extra_links": {
         "presentations": [],
-        "videos": [
-          {
-            
-          }
-        ],
+        "videos": [],
         "project_log": "",
-        "reports": [],
-        "demo_video": "",
-        "final_video": ""
+        "reports": []
       },
       "organisation": {
         "name": "",
@@ -501,18 +453,49 @@
       ],
       "extra_links": {
         "presentations": [],
+        "videos": [],
+        "project_log": "",
+        "reports": []
+      },
+      "organisation": {
+        "name": "",
+        "extra_links": ""
+      }
+    },
+
+    {
+      "title": "This is my shoes",
+      "description": "A High-Fidelity Prototype in a Form of a Video Walk-Through That Encapsulates The Idea of Putting Men in Women's Shoe Via The Design of a Content Creation App Whose Creators Will Be Dominantly Women. They will use the app to write their everyday story and upload the contents to the system. Additionally, the app also allows content consumers, who are men, to interact the a shared story via the implementation of virtual reality",
+      "project_type": "Individual",
+      "role": "3D Modeller & UX / UI Designer",
+      "images": {
+        "thumbnail": "thisismyshoes",
+        "progress": [
+          ""
+        ]
+      },
+      "programming_languages": [],
+      "github": "",
+      "live_url": "",
+      "apis": [
+        {
+          "name": "",
+          "link": ""
+        }
+      ],
+      "extra_links": {
+        "presentations": [],
         "videos": [
           {
-            
+            "name": "Video Walk-through",
+            "link": "https://www.youtube.com/watch?v=9DNd6KciCAM"
           }
         ],
         "project_log": "",
-        "reports": [],
-        "demo_video": "",
-        "final_video": ""
+        "reports": []
       },
       "organisation": {
-        "name": "T",
+        "name": "",
         "extra_links": ""
       }
     }

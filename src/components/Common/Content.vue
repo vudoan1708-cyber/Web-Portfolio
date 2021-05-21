@@ -1,7 +1,7 @@
 <template>
   <div id="content">
     <!-- <transition name="fade"> -->
-      <Projects :projects="projectsProps" />
+      <Projects :emitter="emitterObj" :projects="projectsProps" />
     <!-- </transition> -->
   </div>
 </template>
@@ -14,6 +14,9 @@ import Projects from '@/components/Common/Projects.vue';
 export default {
   name: 'Content',
   props: {
+    emitter: {
+      type: Object,
+    },
     projects: {
       type: Array,
     },
@@ -22,6 +25,8 @@ export default {
     Projects,
   },
   setup(props) {
+    // Props
+    const emitterObj = ref(props.emitter);
     const projectsProps = ref(props.projects);
 
     watch(() => props.projects, (data) => {
@@ -29,6 +34,7 @@ export default {
     });
 
     return {
+      emitterObj,
       projectsProps,
     };
   },

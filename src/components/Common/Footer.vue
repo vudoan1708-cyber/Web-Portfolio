@@ -17,7 +17,7 @@ export default {
   margin: 0 auto;
   padding: 10px;
   background-color: rgb(148, 53, 53);
-  color: rgb(146, 146, 230);
+  color: rgb(183, 183, 233);
   width: 100%;
 
   a {

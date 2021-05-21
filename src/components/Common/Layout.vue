@@ -1,14 +1,18 @@
 <template>
-  <div id="layout" v-if="emailDetail === ''">
+  <div class="layout" v-if="emailDetail === ''">
     <Introduction />
-    <Content :projects="projects" />
+    <Content :emitter="emitterObj" :projects="projects" />
     <Blogs />
     <Resume />
   </div>
 
-  <div id="layout" v-else>
+  <div class="layout" v-else-if="emailDetail !== ''">
     <Message v-if="emailDetail !== 'vudoan1708@gmail.com'" :emailDetail="emailDetail" />
     <Email />
+  </div>
+
+  <div class="layout" v-if="furtherDetail !== null">
+    <FurtherDetails :emitter="emitterObj" :furtherDetail="furtherDetail" />
   </div>
 </template>
 
@@ -24,6 +28,7 @@ import Email from '@/components/Common/Email.vue';
 
 // Reusable
 import Message from '@/components/Reusable/Message.vue';
+import FurtherDetails from '@/components/Reusable/FurtherDetails.vue';
 
 // JSON
 import Portfolio from '@/components/JSON/portfolio.json';
@@ -45,16 +50,23 @@ export default {
     Resume,
     Email,
     Message,
+    FurtherDetails,
   },
   setup(props) {
+    // Props
+    const emitterObj = ref(props.emitter);
+
     // Apps
     const projects = ref([]);
 
     // Email Section
     const emailDetail = ref('');
 
+    // Further Detail Section
+    const furtherDetail = ref(null);
+
     // Code or Design
-    props.emitter.on('portfolio_view', (view) => {
+    emitterObj.value.on('portfolio_view', (view) => {
       projects.value = [];
       if (view === 'Code') {
         Portfolio.coding.apps.forEach((app) => {
@@ -69,8 +81,13 @@ export default {
     // provideStore('portfolio_view', projects);
 
     // Open up Email Screen
-    props.emitter.on('email_screen', (email) => {
+    emitterObj.value.on('email_screen', (email) => {
       emailDetail.value = email;
+    });
+
+    // Open up Further Detail Screen
+    emitterObj.value.on('project_card', (detail) => {
+      furtherDetail.value = detail;
     });
 
     onBeforeMount(() => {
@@ -80,15 +97,17 @@ export default {
     });
 
     return {
+      emitterObj,
       projects,
       emailDetail,
+      furtherDetail,
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-#layout {
+.layout {
   position: absolute;
   display: block;
   top: 0;

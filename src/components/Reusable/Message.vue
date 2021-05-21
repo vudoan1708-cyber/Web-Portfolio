@@ -40,7 +40,7 @@ export default {
 
     const details = ref(props.emailDetail);
 
-    // Close The Erro Board
+    // Close The Error Board
     function closeErrorBoard() {
       if (!emitter.value.err) {
         emitter.value.store.emit('email_screen', details.value);
