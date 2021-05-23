@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <footer>Made with <a href="https://vuejs.org/" target="_blank">Vue.js</a></footer>
+    <footer>Made with <a href="https://v3.vuejs.org/" target="_blank">Vue.js</a></footer>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ export default {
 
   a {
     text-decoration: none;
-    color: rgb(146, 146, 230);
+    color: rgb(178, 178, 245);
   }
 }
 </style>

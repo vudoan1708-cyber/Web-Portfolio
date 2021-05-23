@@ -4,11 +4,7 @@
     <div class="details">
       <section>
         <h4>Description: </h4>
-          <p>{{ projectDetails.description }}
-            <a v-if="projectDetails.orgExtraLink !== ''"
-              :href="projectDetails.orgExtraLink"
-              target="_blank">{{ projectDetails.orgName }}
-            </a>
+          <p>{{ projectDetails.description }} {{ projectDetails.orgName }}
           </p> <br />
       </section>
 
@@ -51,7 +47,7 @@ export default {
       type: String,
     },
     liveURL: {
-      type: String,
+      type: [Object, String],
     },
     programmingLangs: {
       type: Array,

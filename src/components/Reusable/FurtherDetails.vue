@@ -8,8 +8,13 @@
         <h1>{{ detail.title }}</h1>
       </section>
       <!-- Description -->
-      <section v-if="detail.desc !== ''">
-        <p>{{ detail.desc }}</p>
+      <section id="project_desc" v-if="detail.desc !== ''">
+        <p>{{ detail.desc }}
+          <a v-if="detail.organisation.name !== '' && detail.organisation.extra_links !== ''"
+            :href="detail.organisation.extra_links"
+            target="_blank">{{ detail.organisation.name }}
+          </a>
+        </p>
       </section>
       <!-- Image -->
       <section class="image_container" v-if="detail.images !== ''">
@@ -21,7 +26,7 @@
         <section class="detail" v-if="detail.videos.length !== 0">
           <div class="videos_container" v-for="(video, videoKey) in detail.videos"
             :key="videoKey">
-            <h3>{{ video.name }}</h3>
+            <h3 class="headers">{{ video.name }}</h3>
             <div class="icon_container">
               <a :href="video.link" target="_blank" alt="demo_video">
                 <img src="@/assets/logos/youtube.png" />
@@ -31,7 +36,7 @@
         </section>
         <!-- Project Log -->
         <section class="detail" v-if="detail.project_log !== ''">
-          <h3>Project Log</h3>
+          <h3 class="headers">Project Log</h3>
           <div class="icon_container">
             <a :href="detail.project_log" target="_blank" alt="report_link">
               <img src="@/assets/logos/project_log.png" />
@@ -42,7 +47,7 @@
         <section class="detail" v-if="detail.reports.length !== 0">
           <div class="report_container" v-for="(report, reportKey) in detail.reports"
             :key="reportKey">
-            <h3>{{ report.name }}</h3>
+            <h3 class="headers">{{ report.name }}</h3>
             <div class="icon_container">
               <a :href="report.link" target="_blank" alt="report_link">
                 <img src="@/assets/logos/report.png" />
@@ -52,6 +57,7 @@
         </section>
         <!-- Github -->
         <section class="detail" v-if="detail.github !== ''">
+          <h3 class="headers">Github URL</h3>
           <div class="icon_container">
             <a :href="detail.github" target="_blank" alt="github_url">
               <img src="@/assets/logos/github.png" />
@@ -60,9 +66,12 @@
         </section>
         <!-- Live URL -->
         <section class="detail" v-if="detail.live_url !== ''">
-          <a :href="detail.live_url" target="_blank" alt="github_url">
-            <p>Live URL</p>
-          </a>
+          <h3 class="headers">{{ detail.live_url.name }}</h3>
+          <div class="icon_container">
+            <a :href="detail.live_url.link" target="_blank" alt="live_url">
+              <img src="@/assets/logos/url.png" />
+            </a>
+          </div>
         </section>
       </section>
     </div>
@@ -151,6 +160,8 @@ export default {
 
       img {
         width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px black;
       }
     }
 
@@ -161,6 +172,12 @@ export default {
 
     #project_title {
       text-align: center;
+      background-color: rgba(255, 250, 250, 0.75);
+      padding: 5px;
+      border-radius: 5px;
+    }
+    #project_desc {
+      text-align: left;
     }
     #links_group {
       position: relative;
@@ -172,6 +189,10 @@ export default {
       .detail {
         position: relative;
         width: 50%;
+
+        .headers {
+          margin: 5px;
+        }
       }
     }
 

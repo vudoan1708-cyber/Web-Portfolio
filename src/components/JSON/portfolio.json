@@ -17,8 +17,11 @@
           "GraphQL",
           "Python"
         ],
-        "github": "https://github.com/cerberus-security-laboratories/des-wristband-ui",
-        "live_url": "https://www.figma.com/file/EcwYNHUPsIgt0DMMcQnmJi/A%26E-wristbands-interface?node-id=0%3A1",
+        "github": "https://github.com/vudoan1708-cyber/Cerberus-AE-Wristband",
+        "live_url": {
+          "name": "Figma Prototype Link",
+          "link": "https://www.figma.com/file/EcwYNHUPsIgt0DMMcQnmJi/A%26E-wristbands-interface?node-id=0%3A1"
+        },
         "apis": [
           {
             "name": "",
@@ -27,8 +30,13 @@
         ],
         "extra_links": {
           "presentations": [],
-          "videos": [],
-          "project_log": "https://uweacuk-my.sharepoint.com/:w:/g/personal/donata2_lesiak_live_uwe_ac_uk/ERWV12I6QPlIisqpF1Ixwx4BzL2bAzjQMZLGnJfrqSWFyA?rtime=nnuZqhvZ2Eg",
+          "videos": [
+            {
+              "name": "Showcase Video",
+              "link": "https://www.youtube.com/watch?v=8u69eYnbKwY"
+            }
+          ],
+          "project_log": "https://drive.google.com/file/d/1MsNRn4JvOltF9zrOF4KnUUDOQ75WqQyS/view?usp=sharing",
           "reports": []
         },
         "organisation": {
@@ -55,7 +63,10 @@
           "Node.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Emotion-Based-Music-Streaming-App-WEB/",
-        "live_url": "https://muserfly.herokuapp.com/#/",
+        "live_url": {
+          "name": "Live URL",
+          "link": "https://muserfly.herokuapp.com/#/"
+        },
         "apis": [
           {
             "name": "Spotify API",
@@ -78,7 +89,7 @@
           "reports": [
             {
               "name": "Final Report",
-              "link": "http://vudoan.panel.uwe.ac.uk/IoE/Design%20Pitch%20Document.pdf"
+              "link": "https://drive.google.com/file/d/1BNrhz0tHH4oZTiQVOnc64kq34SqCQ209/view?usp=sharing"
             }
           ]
         },
@@ -109,7 +120,12 @@
           "presentations": [],
           "videos": [],
           "project_log": "",
-          "reports": []
+          "reports": [
+            {
+              "name": "Report",
+              "link": "https://drive.google.com/file/d/1oGvUIXHGZFSEg_aEVzkdqlFrhsXVxO56/view?usp=sharing"
+            }
+          ]
         },
         "organisation": {
           "name": "",
@@ -134,7 +150,10 @@
           "Mappa.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Air-Quality",
-        "live_url": "https://airpollutants.herokuapp.com/",
+        "live_url": {
+          "name": "Live URL",
+          "link": "https://airpollutants.herokuapp.com/"
+        },
         "apis": [
           {
             "name": "OpenAQ",
@@ -169,7 +188,10 @@
           "socket.io"
         ],
         "github": "https://github.com/spikethea/echo_architect",
-        "live_url": "http://quincegorerodney.panel.uwe.ac.uk/echo-architect/",
+        "live_url": {
+          "name": "Live URL",
+          "link": "http://quincegorerodney.panel.uwe.ac.uk/echo-architect/"
+        },
         "apis": [],
         "extra_links": {
           "presentations": [],
@@ -223,7 +245,10 @@
           "Node.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Creating-With-Data",
-        "live_url": "https://p-e-tpolice.glitch.me/",
+        "live_url": {
+          "name": "Live URL",
+          "link": "https://p-e-tpolice.glitch.me/"
+        },
         "apis": [
           {
             "name": "",
@@ -259,7 +284,10 @@
           "Pixi.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Botanism",
-        "live_url": "https://botanism.herokuapp.com/",
+        "live_url": {
+          "name": "Live URL",
+          "link": "https://botanism.herokuapp.com/"
+        },
         "apis": [
           {
             "name": "Trefle API",
@@ -302,7 +330,10 @@
           "Node.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/World-Calendar",
-        "live_url": "https://wholidays.glitch.me/",
+        "live_url": {
+          "name": "Live URL",
+          "link": "https://wholidays.glitch.me/"
+        },
         "apis": [
           {
             "name": "Calendarific API",
@@ -345,7 +376,10 @@
           "Node.js"
         ],
         "github": "https://github.com/vudoan1708-cyber/Coronavirus",
-        "live_url": "https://wwcoronavirus.herokuapp.com/",
+        "live_url": {
+          "name": "Live URL",
+          "link": "https://wwcoronavirus.herokuapp.com/"
+        },
         "apis": [
           {
             "name": "Covid19 API",
@@ -412,7 +446,10 @@
       },
       "programming_languages": [],
       "github": "",
-      "live_url": "https://vudoan387.blogspot.com/",
+      "live_url": {
+        "name": "3D Modelling Portfolio",
+        "link": "https://vudoan387.blogspot.com/"
+      },
       "apis": [
         {
           "name": "",
@@ -444,7 +481,10 @@
       },
       "programming_languages": [],
       "github": "",
-      "live_url": "https://vudoan3dprinting387.blogspot.com/",
+      "live_url": {
+        "name": "3D Printing Portfolio",
+        "link": "https://vudoan3dprinting387.blogspot.com/"
+      },
       "apis": [
         {
           "name": "",
