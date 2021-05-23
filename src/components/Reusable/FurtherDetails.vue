@@ -11,13 +11,18 @@
       <section v-if="detail.desc !== ''">
         <p>{{ detail.desc }}</p>
       </section>
+      <!-- Image -->
+      <section class="image_container" v-if="detail.images !== ''">
+        <img :src="require(`@/assets/imgs/${detail.images}.png`)" />
+      </section>
 
       <section id="links_group" >
         <!-- Videos -->
-        <section class="detail" v-if="detail.videos !== []">
-          <div class="videos_container" v-for="(video, videoKey) in detail.videos" :key="videoKey">
+        <section class="detail" v-if="detail.videos.length !== 0">
+          <div class="videos_container" v-for="(video, videoKey) in detail.videos"
+            :key="videoKey">
             <h3>{{ video.name }}</h3>
-            <div class="img_container">
+            <div class="icon_container">
               <a :href="video.link" target="_blank" alt="demo_video">
                 <img src="@/assets/logos/youtube.png" />
               </a>
@@ -26,22 +31,28 @@
         </section>
         <!-- Project Log -->
         <section class="detail" v-if="detail.project_log !== ''">
-          <a :href="detail.project_log" target="_blank" alt="report_link">
-            <p>Project Log</p>
-          </a>
+          <h3>Project Log</h3>
+          <div class="icon_container">
+            <a :href="detail.project_log" target="_blank" alt="report_link">
+              <img src="@/assets/logos/project_log.png" />
+            </a>
+          </div>
         </section>
         <!-- Reports -->
-        <section class="detail" v-if="detail.reports !== []">
+        <section class="detail" v-if="detail.reports.length !== 0">
           <div class="report_container" v-for="(report, reportKey) in detail.reports"
             :key="reportKey">
-            <a :href="report.link" target="_blank" alt="report_link">
-              <p>{{ report.name }}</p>
-            </a>
+            <h3>{{ report.name }}</h3>
+            <div class="icon_container">
+              <a :href="report.link" target="_blank" alt="report_link">
+                <img src="@/assets/logos/report.png" />
+              </a>
+            </div>
           </div>
         </section>
         <!-- Github -->
         <section class="detail" v-if="detail.github !== ''">
-          <div class="img_container">
+          <div class="icon_container">
             <a :href="detail.github" target="_blank" alt="github_url">
               <img src="@/assets/logos/github.png" />
             </a>
@@ -75,6 +86,8 @@ export default {
     const detail = reactive({
       title: props.furtherDetail.title,
       desc: props.furtherDetail.description,
+      role: props.furtherDetail.role,
+      images: props.furtherDetail.images.thumbnail,
       videos: props.furtherDetail.extra_links.videos,
       presentations: props.furtherDetail.extra_links.presentations,
       project_log: props.furtherDetail.extra_links.project_log,
@@ -123,6 +136,7 @@ export default {
 
   #details {
     position: relative;
+    width: 100%;
     margin: 10px;
     padding: 20px;
     color: rgb(0, 0, 0);
@@ -130,9 +144,19 @@ export default {
     background-color: rgba(87, 87, 87, 0.233);
     text-align: left;
 
+    .image_container {
+      position: relative;
+      width: 100%;
+      margin: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
     section {
       margin: 20px;
-      text-align: left;
+      text-align: center;
     }
 
     #project_title {
@@ -140,17 +164,23 @@ export default {
     }
     #links_group {
       position: relative;
-      margin: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
 
       .detail {
-        display: inline-block;
+        position: relative;
+        width: 50%;
       }
     }
 
-    .img_container {
-      width: 12%;
-      margin: 40px;
+    .icon_container {
+      position: relative;
+      width: 100px;
       cursor: pointer;
+      left: 50%;
+      transform: translateX(-50%);
 
       img {
         width: 100%;
