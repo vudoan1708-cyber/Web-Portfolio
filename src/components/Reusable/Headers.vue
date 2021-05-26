@@ -73,4 +73,21 @@ export default {
     width: 20%;
   }
 }
+
+/* Responsive Text */
+@media screen and (max-width: 770px) {
+  .headers {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .headers {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .headers {
+    font-size: 6px;
+  }
+}
 </style>

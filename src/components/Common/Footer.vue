@@ -25,4 +25,21 @@ export default {
     color: rgb(178, 178, 245);
   }
 }
+
+/* Responsive Text */
+@media screen and (max-width: 770px) {
+  #footer {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #footer {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 460px) {
+  #footer {
+    font-size: 9px;
+  }
+}
 </style>

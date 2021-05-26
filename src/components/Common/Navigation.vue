@@ -22,6 +22,7 @@ export default {
 #nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: black;
   border-bottom-left-radius: 25%;
@@ -43,6 +44,47 @@ export default {
         text-decoration: none;
         color: rgb(218, 218, 218);
         font-weight: normal;
+      }
+    }
+  }
+}
+
+/* Responsive Text */
+@media screen and (max-width: 770px) {
+  #nav {
+    width: 100%;
+
+    #els {
+      padding: 20px;
+
+      .nav_el {
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  #nav {
+    width: 100%;
+
+    #els {
+      padding: 20px;
+
+      .nav_el {
+        font-size: 18px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  #nav {
+    width: 84%;
+
+    #els {
+      padding: 15px;
+
+      .nav_el {
+        font-size: 10px !important;
       }
     }
   }

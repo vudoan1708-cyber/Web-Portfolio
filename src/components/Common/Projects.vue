@@ -5,7 +5,8 @@
         :liveURL="project.live_url" :programmingLangs="project.programming_languages"
         :projectType="project.project_type" :role="project.role" :title="project.title"
         :videos="project.extra_links.videos" :presentations="project.extra_links.presentations"
-        :orgName="project.organisation.name" :orgExtraLink="project.organisation.extra_links" />
+        :orgName="project.organisation.name" :orgExtraLink="project.organisation.extra_links"
+        :mobile="mobile" />
       <ProjectDisplay :image="project.images.thumbnail" />
     </div>
   </div>
@@ -14,8 +15,12 @@
 <script>
 import { ref, watch } from 'vue';
 
+// Reusable Components
 import ProjectDescription from '@/components/Reusable/ProjectDescription.vue';
 import ProjectDisplay from '@/components/Reusable/ProjectDisplay.vue';
+
+// Utils
+import isMobile from '@/components/Utils/mobile';
 
 export default {
   name: 'Projects',
@@ -36,6 +41,9 @@ export default {
     const emitterObj = ref(props.emitter);
     const projectsProp = ref(props.projects);
 
+    // Mobile Detection
+    const mobile = ref(isMobile());
+
     function openWindow(project) {
       // Emit an event of 'project_card' to show further detail of a clicked card
       emitterObj.value.emit('project_card', project);
@@ -48,6 +56,7 @@ export default {
     return {
       projectsProp,
       openWindow,
+      mobile,
     };
   },
 };

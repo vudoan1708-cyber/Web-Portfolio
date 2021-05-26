@@ -120,4 +120,21 @@ export default {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
+
+/* Responsive Text */
+@media screen and (max-width: 770px) {
+  .layout {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .layout {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .layout {
+    font-size: 10px;
+  }
+}
 </style>

@@ -35,7 +35,10 @@
 </template>
 
 <script>
-import { reactive, watch } from 'vue';
+import { reactive, ref, watch } from 'vue';
+
+// Utils
+import truncate from '@/components/Utils/string';
 
 export default {
   name: 'ProjectDescription',
@@ -73,8 +76,12 @@ export default {
     orgExtraLink: {
       type: String,
     },
+    mobile: {
+      type: Boolean,
+    },
   },
   setup(props) {
+    // Props
     const projectDetails = reactive({
       description: props.description,
       githubURL: props.githubURL,
@@ -86,14 +93,18 @@ export default {
       orgName: props.orgName,
       orgExtraLink: props.orgExtraLink,
     });
+    // Mobile Detection
+    const isMobile = ref(props.mobile);
+    // Truncate String To ... If In Mobile Mode
+    if (isMobile.value) projectDetails.description = truncate(projectDetails.description, 50);
 
     watch(() => [
       props.description, props.githubURL, props.liveURL, props.programmingLangs,
-      props.projectType, props.role, props.title, props.orgName, props.orgExtraLink,
+      props.projectType, props.role, props.title, props.orgName, props.orgExtraLink, props.mobile,
     ],
     ([
       desc, githubURL, liveURL, programmingLangs,
-      projectType, role, title, orgName, orgExtraLink,
+      projectType, role, title, orgName, orgExtraLink, mobile,
     ]) => {
       projectDetails.description = desc;
       projectDetails.githubURL = githubURL;
@@ -104,6 +115,8 @@ export default {
       projectDetails.title = title;
       projectDetails.orgName = orgName;
       projectDetails.orgExtraLink = orgExtraLink;
+
+      isMobile.value = mobile;
     });
 
     return {
@@ -144,6 +157,23 @@ export default {
   .details {
     margin: 20px;
     text-align: left;
+  }
+}
+
+/* Responsive Text */
+@media screen and (max-width: 770px) {
+  .descriptions {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .descriptions {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .descriptions {
+    font-size: 9px;
   }
 }
 </style>

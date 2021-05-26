@@ -216,4 +216,57 @@ export default {
     }
   }
 }
+
+/* Responsive Image */
+@media screen and (max-width: 770px) {
+  #details {
+    font-size: 12px;
+
+    section {
+      margin: 10px !important;
+    }
+
+    #links_group {
+      margin: 10px !important;
+
+      .icon_container {
+        width: 75% !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  #details {
+    font-size: 10px;
+
+    section {
+      margin: 10px !important;
+    }
+
+    #links_group {
+      margin: 10px !important;
+
+      .icon_container {
+        width: 50% !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  #details {
+    font-size: 7px;
+
+    section {
+      margin: 8px !important;
+    }
+
+    #links_group {
+      margin: 2.5px !important;
+
+      .icon_container {
+        width: 25% !important;
+      }
+    }
+  }
+}
 </style>
