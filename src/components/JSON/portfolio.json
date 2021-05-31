@@ -12,7 +12,7 @@
             ""
           ]
         },
-        "programming_languages": [
+        "technologies": [
           "Golang",
           "GraphQL",
           "Python"
@@ -40,8 +40,13 @@
           "reports": []
         },
         "organisation": {
+          "nda": true,
           "name": "The Cerberus Security Laboratories Team",
           "extra_links": "https://cerberus-laboratories.com/"
+        },
+        "timeline": {
+          "academic": "Nov, 2020 - April, 2021",
+          "isOnGoing": false
         }
       },
 
@@ -56,11 +61,12 @@
             ""
           ]
         },
-        "programming_languages": [
+        "technologies": [
           "Vue.js",
           "p5.js",
           "D3.js",
-          "Node.js"
+          "Node.js",
+          "MongoDB Atlas"
         ],
         "github": "https://github.com/vudoan1708-cyber/Emotion-Based-Music-Streaming-App-WEB/",
         "live_url": {
@@ -94,8 +100,13 @@
           ]
         },
         "organisation": {
+          "nda": false,
           "name": "",
           "extra_links": ""
+        },
+        "timeline": {
+          "academic": "25 October, 2020 - 6 May, 2021",
+          "isOnGoing": true
         }
       },
 
@@ -110,7 +121,7 @@
             ""
           ]
         },
-        "programming_languages": [
+        "technologies": [
           "Python (Tensorflow)"
         ],
         "github": "https://github.com/vudoan1708-cyber/Vu-Sloth",
@@ -128,8 +139,13 @@
           ]
         },
         "organisation": {
+          "nda": false,
           "name": "",
           "extra_links": ""
+        },
+        "timeline": {
+          "academic": "12 April, 2020 - 6 May, 2021",
+          "isOnGoing": false
         }
       },
 
@@ -144,7 +160,7 @@
             ""
           ]
         },
-        "programming_languages": [
+        "technologies": [
           "p5.js",
           "Node.js",
           "Mappa.js"
@@ -167,8 +183,13 @@
           "reports": []
         },
         "organisation": {
+          "nda": false,
           "name": "",
           "extra_links": ""
+        },
+        "timeline": {
+          "academic": "23 Sep, 2019 - 04 Nov, 2019",
+          "isOnGoing": false
         }
       },
 
@@ -183,7 +204,7 @@
             ""
           ]
         },
-        "programming_languages": [
+        "technologies": [
           "Node.js",
           "socket.io"
         ],
@@ -222,8 +243,13 @@
           ]
         },
         "organisation": {
+          "nda": false,
           "name": "",
           "extra_links": ""
+        },
+        "timeline": {
+          "academic": "23 Sep, 2019 - 20 April, 2020",
+          "isOnGoing": false
         }
       },
 
@@ -238,7 +264,7 @@
             ""
           ]
         },
-        "programming_languages": [
+        "technologies": [
           "Vanilla Javascript",
           "face-api.js",
           "p5.js",
@@ -262,8 +288,13 @@
           "reports": []
         },
         "organisation": {
+          "nda": false,
           "name": "",
           "extra_links": ""
+        },
+        "timeline": {
+          "academic": "20 Jan, 2019 - 20 April, 2020",
+          "isOnGoing": false
         }
       },
 
@@ -278,7 +309,7 @@
             ""
           ]
         },
-        "programming_languages": [
+        "technologies": [
           "Vanilla Javascript",
           "Node.js",
           "Pixi.js"
@@ -309,8 +340,13 @@
           "reports": []
         },
         "organisation": {
+          "nda": false,
           "name": "",
           "extra_links": ""
+        },
+        "timeline": {
+          "academic": "2020",
+          "isOnGoing": false
         }
       },
 
@@ -325,7 +361,7 @@
             ""
           ]
         },
-        "programming_languages": [
+        "technologies": [
           "Vanilla Javascript",
           "Node.js"
         ],
@@ -355,8 +391,13 @@
           "reports": []
         },
         "organisation": {
+          "nda": false,
           "name": "",
           "extra_links": ""
+        },
+        "timeline": {
+          "academic": "2020",
+          "isOnGoing": false
         }
       },
 
@@ -371,7 +412,7 @@
             ""
           ]
         },
-        "programming_languages": [
+        "technologies": [
           "p5.js",
           "Node.js"
         ],
@@ -393,8 +434,13 @@
           "reports": []
         },
         "organisation": {
+          "nda": false,
           "name": "",
           "extra_links": ""
+        },
+        "timeline": {
+          "academic": "2020",
+          "isOnGoing": false
         }
       }
     ],
@@ -410,7 +456,7 @@
             ""
           ]
         },
-        "programming_languages": [],
+        "technologies": [],
         "github": "",
         "live_url": "",
         "apis": [
@@ -426,8 +472,13 @@
           "reports": []
         },
         "organisation": {
+          "nda": false,
           "name": "",
           "extra_links": ""
+        },
+        "timeline": {
+          "academic": "2018",
+          "isOnGoing": false
         }
       }
     ]
@@ -444,7 +495,11 @@
           ""
         ]
       },
-      "programming_languages": [],
+      "technologies": [
+        "Maya",
+        "ZBrush",
+        "Substance Painter"
+      ],
       "github": "",
       "live_url": {
         "name": "3D Modelling Portfolio",
@@ -463,8 +518,13 @@
         "reports": []
       },
       "organisation": {
+        "nda": false,
         "name": "",
         "extra_links": ""
+      },
+      "timeline": {
+        "academic": "None",
+        "isOnGoing": false
       }
     },
 
@@ -479,7 +539,11 @@
           ""
         ]
       },
-      "programming_languages": [],
+      "technologies": [
+        "Maya",
+        "Rhino 6",
+        "MakerBot"
+      ],
       "github": "",
       "live_url": {
         "name": "3D Printing Portfolio",
@@ -498,8 +562,13 @@
         "reports": []
       },
       "organisation": {
+        "nda": false,
         "name": "",
         "extra_links": ""
+      },
+      "timeline": {
+        "academic": "None",
+        "isOnGoing": false
       }
     },
 
@@ -514,9 +583,17 @@
           ""
         ]
       },
-      "programming_languages": [],
+      "technologies": [
+        "Maya",
+        "Adobe Illustrator 2021",
+        "Adobe After Effects 2020",
+        "Adobe Premiere Pro 2020"
+      ],
       "github": "",
-      "live_url": "",
+      "live_url": {
+        "name": "Figma Prototype Link",
+        "link": "https://www.figma.com/file/DDdILJVhu7bk4gxlvwPAs5/This-is-my-shoes?node-id=0%3A1"
+      },
       "apis": [
         {
           "name": "",
@@ -535,8 +612,13 @@
         "reports": []
       },
       "organisation": {
+        "nda": false,
         "name": "",
         "extra_links": ""
+      },
+      "timeline": {
+        "academic": "11 Jan, 2021 - 6th May, 2021",
+        "isOnGoing": false
       }
     }
   ]

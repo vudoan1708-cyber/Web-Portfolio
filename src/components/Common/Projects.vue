@@ -2,7 +2,7 @@
   <div class="project_wrapper" v-for="(project, projectKey) in projectsProp" :key="projectKey">
     <div class="grid_display" @click="openWindow(project)">
       <ProjectDescription :description="project.description" :githubURL="project.github"
-        :liveURL="project.live_url" :programmingLangs="project.programming_languages"
+        :liveURL="project.live_url" :technologies="project.technologies"
         :projectType="project.project_type" :role="project.role" :title="project.title"
         :videos="project.extra_links.videos" :presentations="project.extra_links.presentations"
         :orgName="project.organisation.name" :orgExtraLink="project.organisation.extra_links"

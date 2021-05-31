@@ -18,10 +18,10 @@
           <p>{{ projectDetails.role }}</p> <br />
       </section>
 
-      <section v-if="projectDetails.programmingLangs.length > 0">
-        <h4>Programming Languages: </h4>
-          <p v-for="(lang, langKey) in projectDetails.programmingLangs"
-            :key="langKey">{{ lang }}
+      <section v-if="projectDetails.technologies.length > 0">
+        <h4>Technologies: </h4>
+          <p v-for="(tech, techKey) in projectDetails.technologies"
+            :key="techKey">{{ tech }}
           </p> <br />
       </section>
 
@@ -52,7 +52,7 @@ export default {
     liveURL: {
       type: [Object, String],
     },
-    programmingLangs: {
+    technologies: {
       type: Array,
     },
     projectType: {
@@ -86,7 +86,7 @@ export default {
       description: props.description,
       githubURL: props.githubURL,
       liveURL: props.liveURL,
-      programmingLangs: props.programmingLangs,
+      technologies: props.technologies,
       projectType: props.projectType,
       role: props.role,
       title: props.title,
@@ -95,21 +95,22 @@ export default {
     });
     // Mobile Detection
     const isMobile = ref(props.mobile);
-    // Truncate String To ... If In Mobile Mode
+    // Truncate String To 50 characters If In Mobile Mode
     if (isMobile.value) projectDetails.description = truncate(projectDetails.description, 50);
+    else projectDetails.description = truncate(projectDetails.description, 200);
 
     watch(() => [
-      props.description, props.githubURL, props.liveURL, props.programmingLangs,
+      props.description, props.githubURL, props.liveURL, props.technologies,
       props.projectType, props.role, props.title, props.orgName, props.orgExtraLink, props.mobile,
     ],
     ([
-      desc, githubURL, liveURL, programmingLangs,
+      desc, githubURL, liveURL, technologies,
       projectType, role, title, orgName, orgExtraLink, mobile,
     ]) => {
       projectDetails.description = desc;
       projectDetails.githubURL = githubURL;
       projectDetails.liveURL = liveURL;
-      projectDetails.programmingLangs = programmingLangs;
+      projectDetails.technologies = technologies;
       projectDetails.projectType = projectType;
       projectDetails.role = role;
       projectDetails.title = title;
