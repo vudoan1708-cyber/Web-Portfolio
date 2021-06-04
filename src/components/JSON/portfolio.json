@@ -9,7 +9,14 @@
         "images": {
           "thumbnail": "cerberus",
           "progress": [
-            ""
+            {
+              "title": "Diagram & Code",
+              "imgs": [
+                "cerberus_diagram",
+                "cerberus_go_graphql",
+                "cerberus_latestWristbandData"
+              ]
+            }
           ]
         },
         "technologies": [
@@ -36,7 +43,7 @@
               "link": "https://www.youtube.com/watch?v=8u69eYnbKwY"
             }
           ],
-          "project_log": "https://drive.google.com/file/d/1MsNRn4JvOltF9zrOF4KnUUDOQ75WqQyS/view?usp=sharing",
+          "project_log": "",
           "reports": []
         },
         "organisation": {
@@ -58,7 +65,18 @@
         "images": {
           "thumbnail": "muserfly",
           "progress": [
-            ""
+            {
+              "title": "On Mobile",
+              "imgs": [
+                "muserfly_mobile_home",
+                "muserfly_mobile_map",
+                "muserfly_mobile_records",
+                "muserfly_mobile_record_detail",
+                "muserfly_mobile_right_pane",
+                "muserfly_mobile_search",
+                "muserfly_mobile_settings"
+              ]
+            }
           ]
         },
         "technologies": [
@@ -118,7 +136,15 @@
         "images": {
           "thumbnail": "AI(GAN)",
           "progress": [
-            ""
+            {
+              "title": "Training Progress",
+              "imgs": [
+                "AI(GAN)_init",
+                "AI(GAN)_01",
+                "AI(GAN)_02",
+                "AI(GAN)_03"
+              ]
+            }
           ]
         },
         "technologies": [
@@ -157,7 +183,18 @@
         "images": {
           "thumbnail": "aq",
           "progress": [
-            ""
+            {
+              "title": "On Mobile",
+              "imgs": [
+                "aq_welcome_page",
+                "aq_homepage",
+                "aq_menu",
+                "aq_menu_pollutant_wiki",
+                "aq_menu_about_you",
+                "aq_homepage_voted",
+                "aq_filtering"
+              ]
+            }
           ]
         },
         "technologies": [
@@ -200,9 +237,7 @@
         "role": "Backend Developer & 3D modeller",
         "images": {
           "thumbnail": "echo_architect",
-          "progress": [
-            ""
-          ]
+          "progress": []
         },
         "technologies": [
           "Node.js",
@@ -260,9 +295,7 @@
         "role": "Lead Developer",
         "images": {
           "thumbnail": "profile",
-          "progress": [
-            ""
-          ]
+          "progress": []
         },
         "technologies": [
           "Vanilla Javascript",
@@ -300,14 +333,12 @@
 
       {
         "title": "Botanism",
-        "description": "A Project Which Is Meant To Provide General Knowledge of The World of Botany and A Little Bit of Gamification Over The Topic",
+        "description": "A Project About Providing General Knowledge of The World of Botany and A Little Bit of Gamification Over The Topic",
         "project_type": "Individual",
         "role": "Lead Developer",
         "images": {
           "thumbnail": "botanism",
-          "progress": [
-            ""
-          ]
+          "progress": []
         },
         "technologies": [
           "Vanilla Javascript",
@@ -352,13 +383,25 @@
 
       {
         "title": "World Holidays",
-        "description": "A Project Which Is Meant To Provide General Knowledge of Holidays Around The World",
+        "description": "A Project About Providing General Knowledge of Every Country's Holidays Around The World",
         "project_type": "Individual",
         "role": "Lead Developer",
         "images": {
           "thumbnail": "holidays",
           "progress": [
-            ""
+            {
+              "title": "On Mobile",
+              "imgs": [
+                "holidays_homepage",
+                "holidays_month_detail",
+                "holidays_country_search",
+                "holidays_homepage_searched",
+                "holidays_month_detail_searched",
+                "holidays_infobox",
+                "holidays_infobox_searched_countries",
+                "holidays_infobox_graphs"
+              ]
+            }
           ]
         },
         "technologies": [
@@ -409,7 +452,17 @@
         "images": {
           "thumbnail": "coronavirus",
           "progress": [
-            ""
+            {
+              "title": "On Mobile",
+              "imgs": [
+                "coronavirus_welcoming_page",
+                "coronavirus_homepage",
+                "coronavirus_homepage_total_confirmed",
+                "coronavirus_homepage_total_death",
+                "coronavirus_homepage_total_recovered",
+                "coronavirus_homepage_daily"
+              ]
+            }
           ]
         },
         "technologies": [
@@ -452,9 +505,7 @@
         "role": "Lead Developer",
         "images": {
           "thumbnail": "birdie_jump",
-          "progress": [
-            ""
-          ]
+          "progress": []
         },
         "technologies": [],
         "github": "",
@@ -491,9 +542,7 @@
       "role": "3D Artist",
       "images": {
         "thumbnail": "3d",
-        "progress": [
-          ""
-        ]
+        "progress": []
       },
       "technologies": [
         "Maya",
@@ -523,7 +572,7 @@
         "extra_links": ""
       },
       "timeline": {
-        "academic": "None",
+        "academic": "",
         "isOnGoing": false
       }
     },
@@ -535,9 +584,7 @@
       "role": "3D Modeller",
       "images": {
         "thumbnail": "3d_printing",
-        "progress": [
-          ""
-        ]
+        "progress": []
       },
       "technologies": [
         "Maya",
@@ -567,7 +614,7 @@
         "extra_links": ""
       },
       "timeline": {
-        "academic": "None",
+        "academic": "",
         "isOnGoing": false
       }
     },
@@ -579,9 +626,7 @@
       "role": "3D Modeller & UX / UI Designer",
       "images": {
         "thumbnail": "thisismyshoes",
-        "progress": [
-          ""
-        ]
+        "progress": []
       },
       "technologies": [
         "Maya",

@@ -1,7 +1,22 @@
 <template>
   <div class="descriptions">
+    <!-- NDA Icon -->
+    <section v-if="projectDetails.orgNDA" class="nda">
+      <img src="@/assets/logos/NDA.png" />
+    </section>
+
     <h2>{{ projectDetails.title }}</h2>
     <div class="details">
+      <section v-if="projectDetails.timeline.academic !== ''">
+        <h4>Timeline: </h4>
+          <h5 v-if="!projectDetails.timeline.isOnGoing">{{ projectDetails.timeline.academic }}
+          </h5> <br v-if="!projectDetails.timeline.isOnGoing" />
+
+          <h5 v-if="projectDetails.timeline.isOnGoing">
+            {{ projectDetails.timeline.academic }} (Still On Going)
+          </h5> <br  v-if="projectDetails.timeline.isOnGoing"  />
+      </section>
+
       <section>
         <h4>Description: </h4>
           <p>{{ projectDetails.description }} {{ projectDetails.orgName }}
@@ -76,6 +91,12 @@ export default {
     orgExtraLink: {
       type: String,
     },
+    orgNDA: {
+      type: Boolean,
+    },
+    timeline: {
+      type: Object,
+    },
     mobile: {
       type: Boolean,
     },
@@ -92,6 +113,8 @@ export default {
       title: props.title,
       orgName: props.orgName,
       orgExtraLink: props.orgExtraLink,
+      orgNDA: props.orgNDA,
+      timeline: props.timeline,
     });
     // Mobile Detection
     const isMobile = ref(props.mobile);
@@ -101,11 +124,13 @@ export default {
 
     watch(() => [
       props.description, props.githubURL, props.liveURL, props.technologies,
-      props.projectType, props.role, props.title, props.orgName, props.orgExtraLink, props.mobile,
+      props.projectType, props.role, props.title, props.orgName, props.orgExtraLink, props.orgNDA,
+      props.timeline, props.mobile,
     ],
     ([
       desc, githubURL, liveURL, technologies,
-      projectType, role, title, orgName, orgExtraLink, mobile,
+      projectType, role, title, orgName, orgExtraLink, orgNDA,
+      timeline, mobile,
     ]) => {
       projectDetails.description = desc;
       projectDetails.githubURL = githubURL;
@@ -116,6 +141,8 @@ export default {
       projectDetails.title = title;
       projectDetails.orgName = orgName;
       projectDetails.orgExtraLink = orgExtraLink;
+      projectDetails.orgNDA = orgNDA;
+      projectDetails.timeline = timeline;
 
       isMobile.value = mobile;
     });
@@ -152,6 +179,18 @@ export default {
     z-index: -10;
   }
 
+  .nda {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    width: 4%;
+    margin: 5px;
+
+    img {
+      width: 100%;
+    }
+  }
+
   h2 {
     margin: 20px;
   }
@@ -165,16 +204,31 @@ export default {
 @media screen and (max-width: 770px) {
   .descriptions {
     font-size: 15px;
+
+    .nda {
+      top: -5% !important;
+      width: 7% !important;
+    }
   }
 }
 @media screen and (max-width: 600px) {
   .descriptions {
     font-size: 12px;
+
+    .nda {
+      top: -5% !important;
+      width: 7% !important;
+    }
   }
 }
 @media screen and (max-width: 460px) {
   .descriptions {
     font-size: 9px;
+
+    .nda {
+      top: -5% !important;
+      width: 7% !important;
+    }
   }
 }
 </style>

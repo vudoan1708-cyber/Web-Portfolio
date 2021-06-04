@@ -1,7 +1,7 @@
 <template>
   <div id="content">
     <!-- <transition name="fade"> -->
-      <Projects :emitter="emitterObj" :projects="projectsProps" />
+      <Projects :emitter="emitterObj" :projects="projectsProps" :mobile="isMobile" />
     <!-- </transition> -->
   </div>
 </template>
@@ -20,6 +20,9 @@ export default {
     projects: {
       type: Array,
     },
+    mobile: {
+      type: Boolean,
+    },
   },
   components: {
     Projects,
@@ -28,6 +31,7 @@ export default {
     // Props
     const emitterObj = ref(props.emitter);
     const projectsProps = ref(props.projects);
+    const isMobile = ref(props.mobile);
 
     watch(() => props.projects, (data) => {
       projectsProps.value = data;
@@ -36,6 +40,7 @@ export default {
     return {
       emitterObj,
       projectsProps,
+      isMobile,
     };
   },
 };

@@ -6,7 +6,8 @@
         :projectType="project.project_type" :role="project.role" :title="project.title"
         :videos="project.extra_links.videos" :presentations="project.extra_links.presentations"
         :orgName="project.organisation.name" :orgExtraLink="project.organisation.extra_links"
-        :mobile="mobile" />
+        :orgNDA="project.organisation.nda" :timeline="project.timeline"
+        :mobile="isMobile" />
       <ProjectDisplay :image="project.images.thumbnail" />
     </div>
   </div>
@@ -19,9 +20,6 @@ import { ref, watch } from 'vue';
 import ProjectDescription from '@/components/Reusable/ProjectDescription.vue';
 import ProjectDisplay from '@/components/Reusable/ProjectDisplay.vue';
 
-// Utils
-import isMobile from '@/components/Utils/mobile';
-
 export default {
   name: 'Projects',
   props: {
@@ -30,6 +28,9 @@ export default {
     },
     projects: {
       type: Array,
+    },
+    mobile: {
+      type: Boolean,
     },
   },
   components: {
@@ -40,9 +41,7 @@ export default {
     // Props
     const emitterObj = ref(props.emitter);
     const projectsProp = ref(props.projects);
-
-    // Mobile Detection
-    const mobile = ref(isMobile());
+    const isMobile = ref(props.mobile);
 
     function openWindow(project) {
       // Emit an event of 'project_card' to show further detail of a clicked card
@@ -55,8 +54,8 @@ export default {
 
     return {
       projectsProp,
+      isMobile,
       openWindow,
-      mobile,
     };
   },
 };

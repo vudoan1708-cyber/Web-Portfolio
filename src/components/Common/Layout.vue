@@ -1,7 +1,7 @@
 <template>
   <div class="layout" v-if="emailDetail === ''">
     <Introduction />
-    <Content :emitter="emitterObj" :projects="projects" />
+    <Content :emitter="emitterObj" :projects="projects" :mobile="mobile" />
     <Blogs />
     <Resume />
   </div>
@@ -12,7 +12,7 @@
   </div>
 
   <div class="layout" v-if="furtherDetail !== null">
-    <FurtherDetails :emitter="emitterObj" :furtherDetail="furtherDetail" />
+    <FurtherDetails :emitter="emitterObj" :furtherDetail="furtherDetail" :mobile="mobile" />
   </div>
 </template>
 
@@ -32,6 +32,9 @@ import FurtherDetails from '@/components/Reusable/FurtherDetails.vue';
 
 // JSON
 import Portfolio from '@/components/JSON/portfolio.json';
+
+// Utils
+import isMobile from '@/components/Utils/mobile';
 
 // Plugin
 // import { provideStore } from '@/components/Utils/plugin';
@@ -55,6 +58,9 @@ export default {
   setup(props) {
     // Props
     const emitterObj = ref(props.emitter);
+
+    // Mobile Detection
+    const mobile = ref(isMobile());
 
     // Apps
     const projects = ref([]);
@@ -101,6 +107,7 @@ export default {
       projects,
       emailDetail,
       furtherDetail,
+      mobile,
     };
   },
 };

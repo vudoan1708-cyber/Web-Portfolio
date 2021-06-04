@@ -17,8 +17,22 @@
         </p>
       </section>
       <!-- Image -->
-      <section class="image_container" v-if="detail.images !== ''">
-        <img :src="require(`@/assets/imgs/${detail.images}.png`)" />
+      <section class="image_container" v-if="detail.images.thumbnail !== ''">
+        <img :src="require(`@/assets/imgs/${detail.images.thumbnail}.png`)" />
+
+        <!-- Progress Imgs Including Mobile Designs And / Or Progress Imgs -->
+        <div v-if="detail.images.progress.length > 0">
+          <div id="mobile_design_container"
+            v-for="(progress, progressKey) in detail.images.progress" :key="progressKey">
+            <h2>{{ progress.title }}</h2>
+            <div id="mobile_design_imgs" ref="mobileDesignVersionRef">
+              <img class="mobile_imgs"
+                v-for="(progressImg, progressImgKey) in progress.imgs"
+                :key="progressImgKey"
+                  :src="require(`@/assets/imgs/progress/${progressImg}.png`)" />
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="links_group" >
@@ -79,7 +93,7 @@
 </template>
 
 <script>
-import { reactive } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
 
 export default {
   name: 'FurtherDetail',
@@ -90,13 +104,20 @@ export default {
     furtherDetail: {
       type: Object,
     },
+    mobile: {
+      type: Boolean,
+    },
   },
   setup(props) {
+    // Props
     const detail = reactive({
       title: props.furtherDetail.title,
       desc: props.furtherDetail.description,
       role: props.furtherDetail.role,
-      images: props.furtherDetail.images.thumbnail,
+      images: {
+        thumbnail: props.furtherDetail.images.thumbnail,
+        progress: props.furtherDetail.images.progress,
+      },
       videos: props.furtherDetail.extra_links.videos,
       presentations: props.furtherDetail.extra_links.presentations,
       project_log: props.furtherDetail.extra_links.project_log,
@@ -105,14 +126,37 @@ export default {
       live_url: props.furtherDetail.live_url,
       organisation: props.furtherDetail.organisation,
     });
+    const isMobile = ref(props.mobile);
+
+    // DOM Ref
+    const mobileDesignVersionRef = ref(null);
 
     function closeProjectDetail() {
       props.emitter.emit('project_card', null);
     }
 
+    onMounted(() => {
+      if (detail.images.progress.length > 0) {
+        for (let i = 0; i < detail.images.progress.length; i += 1) {
+          const numOfColsOnMobile = detail.images.progress[i].imgs > 3 ? 4 : 3;
+          const percentage = !isMobile.value
+            ? `${100 / detail.images.progress[i].imgs.length}%`
+            : `${100 / numOfColsOnMobile}%`;
+
+          // eslint-disable-next-line no-unused-expressions
+          !isMobile.value
+            ? mobileDesignVersionRef.value.setAttribute('style',
+              `grid-template-columns: repeat(${detail.images.progress[i].imgs.length}, ${percentage})`)
+            : mobileDesignVersionRef.value.setAttribute('style',
+              `grid-template-columns: repeat(${numOfColsOnMobile}, ${percentage})`);
+        }
+      }
+    });
+
     return {
       closeProjectDetail,
       detail,
+      mobileDesignVersionRef,
     };
   },
 };
@@ -162,6 +206,19 @@ export default {
         width: 100%;
         border-radius: 10px;
         box-shadow: 0px 0px 10px black;
+      }
+
+      #mobile_design_container {
+        margin: 45px 0;
+
+        #mobile_design_imgs {
+          display: grid;
+          margin-top: 10px;
+
+          .mobile_imgs {
+            padding: 10px;
+          }
+        }
       }
     }
 
@@ -226,6 +283,18 @@ export default {
       margin: 10px !important;
     }
 
+    .image_container {
+      #mobile_design_container {
+        margin: 25px 0;
+
+        #mobile_design_imgs {
+          .mobile_imgs {
+            padding: 10px;
+          }
+        }
+      }
+    }
+
     #links_group {
       margin: 10px !important;
 
@@ -243,6 +312,18 @@ export default {
       margin: 10px !important;
     }
 
+    .image_container {
+      #mobile_design_container {
+        margin: 15px 0 !important;
+
+        #mobile_design_imgs {
+          .mobile_imgs {
+            padding: 5px !important;
+          }
+        }
+      }
+    }
+
     #links_group {
       margin: 10px !important;
 
@@ -258,6 +339,18 @@ export default {
 
     section {
       margin: 8px !important;
+    }
+
+    .image_container {
+      #mobile_design_container {
+        margin: 10px 0 !important;
+
+        #mobile_design_imgs {
+          .mobile_imgs {
+            padding: 2px !important;
+          }
+        }
+      }
     }
 
     #links_group {
