@@ -10,19 +10,29 @@
           "thumbnail": "cerberus",
           "progress": [
             {
-              "title": "Diagram & Code",
+              "title": "Data Flow Diagram",
               "imgs": [
-                "cerberus_diagram",
-                "cerberus_go_graphql",
-                "cerberus_latestWristbandData"
+                "cerberus_diagram"
               ]
             }
           ]
         },
         "technologies": [
-          "Golang",
-          "GraphQL",
-          "Python"
+          {
+            "name": "Golang",
+            "img": "golang",
+            "link": "https://golang.org/"
+          },
+          {
+            "name": "GraphQL",
+            "img": "graphql",
+            "link": "https://graphql.org/"
+          },
+          {
+            "name": "Python",
+            "img": "python",
+            "link": "https://www.python.org/"
+          }
         ],
         "github": "https://github.com/vudoan1708-cyber/Cerberus-AE-Wristband",
         "live_url": {
@@ -31,7 +41,7 @@
         },
         "apis": [
           {
-            "name": "",
+            "name": "Internal APIs",
             "link": ""
           }
         ],
@@ -68,8 +78,12 @@
             {
               "title": "On Mobile",
               "imgs": [
+                "muserfly_mobile_welcoming_page",
                 "muserfly_mobile_home",
                 "muserfly_mobile_map",
+                "muserfly_mobile_map_zoom1",
+                "muserfly_mobile_map_zoom2",
+                "muserfly_mobile_map_zoom3",
                 "muserfly_mobile_records",
                 "muserfly_mobile_record_detail",
                 "muserfly_mobile_right_pane",
@@ -80,11 +94,36 @@
           ]
         },
         "technologies": [
-          "Vue.js",
-          "p5.js",
-          "D3.js",
-          "Node.js",
-          "MongoDB Atlas"
+          {
+            "name": "Vue.js",
+            "img": "vue",
+            "link": "https://v3.vuejs.org/"
+          },
+          {
+            "name": "p5.js",
+            "img": "p5",
+            "link": "https://p5js.org/"
+          },
+          {
+            "name": "D3.js",
+            "img": "d3",
+            "link": "https://d3js.org/"
+          },
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          },
+          {
+            "name": "Sass",
+            "img": "scss",
+            "link": "https://sass-lang.com/"
+          },
+          {
+            "name": "MongoDB Atlas",
+            "img": "mongodb",
+            "link": "https://www.mongodb.com/cloud/atlas"
+          }
         ],
         "github": "https://github.com/vudoan1708-cyber/Emotion-Based-Music-Streaming-App-WEB/",
         "live_url": {
@@ -148,7 +187,11 @@
           ]
         },
         "technologies": [
-          "Python (Tensorflow)"
+          {
+            "name": "Python (Tensorflow)",
+            "img": "python+tensorflow",
+            "link": "https://www.tensorflow.org/"
+          }
         ],
         "github": "https://github.com/vudoan1708-cyber/Vu-Sloth",
         "live_url": "",
@@ -198,9 +241,21 @@
           ]
         },
         "technologies": [
-          "p5.js",
-          "Node.js",
-          "Mappa.js"
+          {
+            "name": "p5.js",
+            "img": "p5",
+            "link": "https://p5js.org/"
+          },
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          },
+          {
+            "name": "Mappa.js",
+            "img": "mappa",
+            "link": "https://mappa.js.org/"
+          }
         ],
         "github": "https://github.com/vudoan1708-cyber/Air-Quality",
         "live_url": {
@@ -240,8 +295,16 @@
           "progress": []
         },
         "technologies": [
-          "Node.js",
-          "socket.io"
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          },
+          {
+            "name": "socket.io",
+            "img": "socketio",
+            "link": "https://socket.io/"
+          }
         ],
         "github": "https://github.com/spikethea/echo_architect",
         "live_url": {
@@ -298,10 +361,31 @@
           "progress": []
         },
         "technologies": [
-          "Vanilla Javascript",
-          "face-api.js",
-          "p5.js",
-          "Node.js"
+          {
+            "name": "Vanilla Javascript",
+            "img": "js",
+            "link": "https://www.javascript.com/"
+          },
+          {
+            "name": "face-api.js",
+            "img": "no_logo",
+            "link": "https://justadudewhohacks.github.io/face-api.js/docs/index.html"
+          },
+          {
+            "name": "p5.js",
+            "img": "p5",
+            "link": "https://p5js.org/"
+          },
+          {
+            "name": "Sass",
+            "img": "scss",
+            "link": "https://sass-lang.com/"
+          },
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          }
         ],
         "github": "https://github.com/vudoan1708-cyber/Creating-With-Data",
         "live_url": {
@@ -341,9 +425,26 @@
           "progress": []
         },
         "technologies": [
-          "Vanilla Javascript",
-          "Node.js",
-          "Pixi.js"
+          {
+            "name": "Vanilla Javascript",
+            "img": "js",
+            "link": "https://www.javascript.com/"
+          },
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          },
+          {
+            "name": "Pixi.js",
+            "img": "pixi",
+            "link": "https://www.pixijs.com/"
+          },
+          {
+            "name": "Sass",
+            "img": "scss",
+            "link": "https://sass-lang.com/"
+          }
         ],
         "github": "https://github.com/vudoan1708-cyber/Botanism",
         "live_url": {
@@ -405,8 +506,21 @@
           ]
         },
         "technologies": [
-          "Vanilla Javascript",
-          "Node.js"
+          {
+            "name": "Vanilla Javascript",
+            "img": "js",
+            "link": "https://www.javascript.com/"
+          },
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          },
+          {
+            "name": "Sass",
+            "img": "scss",
+            "link": "https://sass-lang.com/"
+          }
         ],
         "github": "https://github.com/vudoan1708-cyber/World-Calendar",
         "live_url": {
@@ -466,8 +580,16 @@
           ]
         },
         "technologies": [
-          "p5.js",
-          "Node.js"
+          {
+            "name": "p5.js",
+            "img": "p5",
+            "link": "https://p5js.org/"
+          },
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          }
         ],
         "github": "https://github.com/vudoan1708-cyber/Coronavirus",
         "live_url": {
@@ -545,9 +667,21 @@
         "progress": []
       },
       "technologies": [
-        "Maya",
-        "ZBrush",
-        "Substance Painter"
+        {
+          "name": "Maya",
+          "img": "maya",
+          "link": "https://www.autodesk.com/products/maya/overview?term=1-YEAR"
+        },
+        {
+          "name": "ZBrush",
+          "img": "zbrush",
+          "link": "https://pixologic.com/"
+        },
+        {
+          "name": "Substance Painter",
+          "img": "sp",
+          "link": "https://www.substance3d.com/products/substance-painter/"
+        }
       ],
       "github": "",
       "live_url": {
@@ -587,9 +721,21 @@
         "progress": []
       },
       "technologies": [
-        "Maya",
-        "Rhino 6",
-        "MakerBot"
+        {
+          "name": "Maya",
+          "img": "maya",
+          "link": "https://www.autodesk.com/products/maya/overview?term=1-YEAR"
+        },
+        {
+          "name": "Rhino 6",
+          "img": "rhino",
+          "link": "https://www.rhino3d.com/"
+        },
+        {
+          "name": "MakerBot",
+          "img": "makerbot",
+          "link": "https://www.makerbot.com/"
+        }
       ],
       "github": "",
       "live_url": {
@@ -629,10 +775,26 @@
         "progress": []
       },
       "technologies": [
-        "Maya",
-        "Adobe Illustrator 2021",
-        "Adobe After Effects 2020",
-        "Adobe Premiere Pro 2020"
+        {
+          "name": "Maya",
+          "img": "maya",
+          "link": "https://www.autodesk.com/products/maya/overview?term=1-YEAR"
+        },
+        {
+          "name": "Adobe Illustrator 2021",
+          "img": "illustrator",
+          "link": "https://www.adobe.com/uk/products/illustrator/free-trial-download.html"
+        },
+        {
+          "name": "Adobe After Effects 2020",
+          "img": "after_effects",
+          "link": "https://www.adobe.com/uk/products/aftereffects/free-trial-download.html"
+        },
+        {
+          "name": "Adobe Premiere Pro 2020",
+          "img": "premiere_pro",
+          "link": "https://www.adobe.com/uk/products/premiere.html"
+        }
       ],
       "github": "",
       "live_url": {

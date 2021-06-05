@@ -36,7 +36,7 @@
       <section v-if="projectDetails.technologies.length > 0">
         <h4>Technologies: </h4>
           <p v-for="(tech, techKey) in projectDetails.technologies"
-            :key="techKey">{{ tech }}
+            :key="techKey">{{ tech.name }}
           </p> <br />
       </section>
 

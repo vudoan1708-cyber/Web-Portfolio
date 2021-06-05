@@ -22,15 +22,30 @@
 
         <!-- Progress Imgs Including Mobile Designs And / Or Progress Imgs -->
         <div v-if="detail.images.progress.length > 0">
-          <div id="mobile_design_container"
+          <div class="mobile_design_container"
             v-for="(progress, progressKey) in detail.images.progress" :key="progressKey">
             <h2>{{ progress.title }}</h2>
-            <div id="mobile_design_imgs" ref="mobileDesignVersionRef">
+            <div class="mobile_design_imgs" ref="mobileDesignVersionRef">
               <img class="mobile_imgs"
                 v-for="(progressImg, progressImgKey) in progress.imgs"
                 :key="progressImgKey"
                   :src="require(`@/assets/imgs/progress/${progressImg}.png`)" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Techs -->
+      <section id="tech_container"
+        v-if="detail.technologies.length > 0">
+        <h2>Technologies</h2>
+        <div id="tech_wrapper" ref="techRef">
+          <div class="tech_lists"
+            v-for="(tech, techKey) in detail.technologies" :key="techKey">
+            <a :href="tech.link" target="_blank">
+              <h4>{{ tech.name }}</h4>
+              <img class="tech_imgs" :src="require(`@/assets/imgs/techs/${tech.img}.png`)" />
+            </a>
           </div>
         </div>
       </section>
@@ -124,31 +139,57 @@ export default {
       reports: props.furtherDetail.extra_links.reports,
       github: props.furtherDetail.github,
       live_url: props.furtherDetail.live_url,
+      technologies: props.furtherDetail.technologies,
       organisation: props.furtherDetail.organisation,
     });
     const isMobile = ref(props.mobile);
 
     // DOM Ref
     const mobileDesignVersionRef = ref(null);
+    const techRef = ref(null);
 
     function closeProjectDetail() {
       props.emitter.emit('project_card', null);
     }
 
+    function createGridDisplay(target, index, childNode, DOMRef) {
+      const newTarget = typeof (target[index][childNode]) !== 'string'
+        ? target[index][childNode]
+        : target;
+
+      const numOfColsOnMobile = newTarget.length < 6
+        ? newTarget.length
+        : 3;
+
+      const numOfColsOnBigScreen = newTarget.length < 10
+        ? newTarget.length
+        : 7;
+
+      // eslint-disable-next-line no-nested-ternary
+      const percentage = !isMobile.value
+        ? (newTarget.length < 8
+          ? `${100 / newTarget.length}%`
+          : `${100 / numOfColsOnBigScreen}%`)
+        : `${100 / numOfColsOnMobile}%`;
+
+      // eslint-disable-next-line no-unused-expressions
+      !isMobile.value
+        ? DOMRef.setAttribute('style',
+          `grid-template-columns: repeat(${numOfColsOnBigScreen}, ${percentage})`)
+        : DOMRef.setAttribute('style',
+          `grid-template-columns: repeat(${numOfColsOnMobile}, ${percentage})`);
+    }
+
     onMounted(() => {
       if (detail.images.progress.length > 0) {
         for (let i = 0; i < detail.images.progress.length; i += 1) {
-          const numOfColsOnMobile = detail.images.progress[i].imgs > 3 ? 4 : 3;
-          const percentage = !isMobile.value
-            ? `${100 / detail.images.progress[i].imgs.length}%`
-            : `${100 / numOfColsOnMobile}%`;
+          createGridDisplay(detail.images.progress, i, 'imgs', mobileDesignVersionRef.value);
+        }
+      }
 
-          // eslint-disable-next-line no-unused-expressions
-          !isMobile.value
-            ? mobileDesignVersionRef.value.setAttribute('style',
-              `grid-template-columns: repeat(${detail.images.progress[i].imgs.length}, ${percentage})`)
-            : mobileDesignVersionRef.value.setAttribute('style',
-              `grid-template-columns: repeat(${numOfColsOnMobile}, ${percentage})`);
+      if (detail.technologies.length > 0) {
+        for (let i = 0; i < detail.technologies.length; i += 1) {
+          createGridDisplay(detail.technologies, i, 'img', techRef.value);
         }
       }
     });
@@ -157,6 +198,7 @@ export default {
       closeProjectDetail,
       detail,
       mobileDesignVersionRef,
+      techRef,
     };
   },
 };
@@ -208,15 +250,53 @@ export default {
         box-shadow: 0px 0px 10px black;
       }
 
-      #mobile_design_container {
+      .mobile_design_container {
         margin: 45px 0;
 
-        #mobile_design_imgs {
+        .mobile_design_imgs {
           display: grid;
           margin-top: 10px;
 
           .mobile_imgs {
             padding: 10px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    #tech_container {
+      position: relative;
+      margin-top: 55px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(185, 130, 202, 0.25);
+
+      #tech_wrapper {
+        display: grid;
+
+        .tech_lists {
+          margin-top: 10px;
+          width: 60%;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          cursor: pointer;
+          text-decoration: none;
+          transition: all .2s;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+
+          .tech_imgs {
+            padding: 10px;
+            width: 50%;
+          }
+
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
@@ -284,12 +364,30 @@ export default {
     }
 
     .image_container {
-      #mobile_design_container {
-        margin: 25px 0;
+      .mobile_design_container {
+        margin: 45px 0 !important;
 
-        #mobile_design_imgs {
+        .mobile_design_imgs {
           .mobile_imgs {
-            padding: 10px;
+            padding: 10px !important;
+          }
+        }
+      }
+    }
+
+    #tech_container {
+      position: relative;
+      margin-top: 55px;
+      background-color: rgba(201, 202, 130, 0.25);
+
+      #tech_wrapper {
+        .tech_lists {
+          margin-top: 10px !important;
+          width: 60% !important;
+
+          .tech_imgs {
+            padding: 10px !important;
+            width: 50% !important;
           }
         }
       }
@@ -313,12 +411,30 @@ export default {
     }
 
     .image_container {
-      #mobile_design_container {
-        margin: 15px 0 !important;
+      .mobile_design_container {
+        margin: 20px 0 !important;
 
-        #mobile_design_imgs {
+        .mobile_design_imgs {
           .mobile_imgs {
             padding: 5px !important;
+          }
+        }
+      }
+    }
+
+    #tech_container {
+      position: relative;
+      margin-top: 55px;
+      background-color: transparent !important;
+
+      #tech_wrapper {
+        .tech_lists {
+          margin-top: 10px !important;
+          width: 60% !important;
+
+          .tech_imgs {
+            padding: 10px !important;
+            width: 50% !important;
           }
         }
       }
@@ -342,12 +458,30 @@ export default {
     }
 
     .image_container {
-      #mobile_design_container {
-        margin: 10px 0 !important;
+      .mobile_design_container {
+        margin: 20px 0 !important;
 
-        #mobile_design_imgs {
+        .mobile_design_imgs {
           .mobile_imgs {
             padding: 2px !important;
+          }
+        }
+      }
+    }
+
+    #tech_container {
+      position: relative;
+      margin-top: 25px !important;
+      background-color: transparent !important;
+
+      #tech_wrapper {
+        .tech_lists {
+          margin-top: 10px !important;
+          width: 100% !important;
+
+          .tech_imgs {
+            padding: 10px !important;
+            width: 100% !important;
           }
         }
       }

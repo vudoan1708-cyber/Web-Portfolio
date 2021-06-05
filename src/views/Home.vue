@@ -42,5 +42,6 @@ export default {
 #home {
   position: relative;
   height: 100%;
+  overflow: hidden;
 }
 </style>
