@@ -39,12 +39,7 @@
           "name": "Figma Prototype Link",
           "link": "https://www.figma.com/file/EcwYNHUPsIgt0DMMcQnmJi/A%26E-wristbands-interface?node-id=0%3A1"
         },
-        "apis": [
-          {
-            "name": "Internal APIs",
-            "link": ""
-          }
-        ],
+        "apis": [],
         "extra_links": {
           "presentations": [],
           "videos": [
@@ -133,6 +128,7 @@
         "apis": [
           {
             "name": "Spotify API",
+            "img": "spotify",
             "link": "https://developer.spotify.com/documentation/web-api/reference/"
           }
         ],
@@ -265,6 +261,7 @@
         "apis": [
           {
             "name": "OpenAQ",
+            "img": "openaq",
             "link": "https://docs.openaq.org/"
           }
         ],
@@ -392,12 +389,7 @@
           "name": "Live URL",
           "link": "https://p-e-tpolice.glitch.me/"
         },
-        "apis": [
-          {
-            "name": "",
-            "link": ""
-          }
-        ],
+        "apis": [],
         "extra_links": {
           "presentations": [],
           "videos": [],
@@ -454,14 +446,17 @@
         "apis": [
           {
             "name": "Trefle API",
+            "img": "trefle",
             "link": "https://trefle.io/"
           },
           {
             "name": "Edamam API",
+            "img": "edamam",
             "link": "https://developer.edamam.com/edamam-docs-recipe-api"
           },
           {
             "name": "Wikipedia API",
+            "img": "wiki",
             "link": "https://www.mediawiki.org/wiki/API:Main_page"
           }
         ],
@@ -530,14 +525,17 @@
         "apis": [
           {
             "name": "Calendarific API",
+            "img": "calendarific",
             "link": "https://calendarific.com/api-documentation"
           },
           {
             "name": "Google Maps API (Geocoding)",
+            "img": "googlemaps",
             "link": "https://developers.google.com/maps/documentation/geocoding/start"
           },
           {
             "name": "Rest Countries API",
+            "img": "no_logo",
             "link": "https://restcountries.eu/"
           }
         ],
@@ -599,6 +597,7 @@
         "apis": [
           {
             "name": "Covid19 API",
+            "img": "no_logo",
             "link": "https://documenter.getpostman.com/view/10808728/SzS8rjbc"
           }
         ],
@@ -632,12 +631,7 @@
         "technologies": [],
         "github": "",
         "live_url": "",
-        "apis": [
-          {
-            "name": "",
-            "link": ""
-          }
-        ],
+        "apis": [],
         "extra_links": {
           "presentations": [],
           "videos": [],
@@ -688,12 +682,7 @@
         "name": "3D Modelling Portfolio",
         "link": "https://vudoan387.blogspot.com/"
       },
-      "apis": [
-        {
-          "name": "",
-          "link": ""
-        }
-      ],
+      "apis": [],
       "extra_links": {
         "presentations": [],
         "videos": [],
@@ -742,12 +731,7 @@
         "name": "3D Printing Portfolio",
         "link": "https://vudoan3dprinting387.blogspot.com/"
       },
-      "apis": [
-        {
-          "name": "",
-          "link": ""
-        }
-      ],
+      "apis": [],
       "extra_links": {
         "presentations": [],
         "videos": [],
@@ -801,12 +785,7 @@
         "name": "Figma Prototype Link",
         "link": "https://www.figma.com/file/DDdILJVhu7bk4gxlvwPAs5/This-is-my-shoes?node-id=0%3A1"
       },
-      "apis": [
-        {
-          "name": "",
-          "link": ""
-        }
-      ],
+      "apis": [],
       "extra_links": {
         "presentations": [],
         "videos": [

@@ -50,6 +50,27 @@
         </div>
       </section>
 
+      <!-- APIs -->
+      <section id="api_container"
+        v-if="detail.apis.length > 0">
+        <h2>APIs</h2>
+        <div id="api_wrapper" ref="apiRef">
+          <div class="api_lists"
+            v-for="(api, apiKey) in detail.apis" :key="apiKey">
+            <a v-if="api.name !== 'Internal API' && api.img !== ''"
+              :href="api.link" target="_blank">
+              <h4>{{ api.name }}</h4>
+              <img ref="apiImgRef"
+                class="api_imgs" :src="require(`@/assets/imgs/apis/${api.img}.png`)" />
+            </a>
+
+            <section v-else>
+              <h4>{{ api.name }}</h4>
+            </section>
+          </div>
+        </div>
+      </section>
+
       <section id="links_group" >
         <!-- Videos -->
         <section class="detail" v-if="detail.videos.length !== 0">
@@ -140,6 +161,7 @@ export default {
       github: props.furtherDetail.github,
       live_url: props.furtherDetail.live_url,
       technologies: props.furtherDetail.technologies,
+      apis: props.furtherDetail.apis,
       organisation: props.furtherDetail.organisation,
     });
     const isMobile = ref(props.mobile);
@@ -147,6 +169,8 @@ export default {
     // DOM Ref
     const mobileDesignVersionRef = ref(null);
     const techRef = ref(null);
+    const apiRef = ref(null);
+    const apiImgRef = ref(null);
 
     function closeProjectDetail() {
       props.emitter.emit('project_card', null);
@@ -192,6 +216,18 @@ export default {
           createGridDisplay(detail.technologies, i, 'img', techRef.value);
         }
       }
+
+      if (detail.apis.length > 0) {
+        if (detail.apis.length === 1 && detail.apis[0].img !== '') {
+          // eslint-disable-next-line no-unused-expressions
+          !isMobile.value
+            ? apiImgRef.value.setAttribute('style', 'width: 15%')
+            : apiImgRef.value.setAttribute('style', 'width: 25%');
+        }
+        for (let i = 0; i < detail.apis.length; i += 1) {
+          createGridDisplay(detail.apis, i, 'img', apiRef.value);
+        }
+      }
     });
 
     return {
@@ -199,6 +235,8 @@ export default {
       detail,
       mobileDesignVersionRef,
       techRef,
+      apiRef,
+      apiImgRef,
     };
   },
 };
@@ -272,12 +310,14 @@ export default {
       border-radius: 5px;
       background-color: rgba(185, 130, 202, 0.25);
 
-      #tech_wrapper {
+      #tech_wrapper,
+      #api_wrapper {
         display: grid;
 
-        .tech_lists {
+        .tech_lists,
+        .api_lists {
           margin-top: 10px;
-          width: 60%;
+          width: 65%;
           position: relative;
           left: 50%;
           transform: translateX(-50%);
@@ -299,6 +339,16 @@ export default {
             text-decoration: underline;
           }
         }
+      }
+    }
+
+    #api_container {
+      @extend #tech_container;
+      background-color: rgba(202, 177, 130, 0.25);
+
+      .api_imgs {
+        padding: 10px;
+        width: 50%;
       }
     }
 
@@ -375,13 +425,16 @@ export default {
       }
     }
 
-    #tech_container {
+    #tech_container,
+    #api_container {
       position: relative;
       margin-top: 55px;
       background-color: rgba(201, 202, 130, 0.25);
 
-      #tech_wrapper {
-        .tech_lists {
+      #tech_wrapper,
+      #api_wrapper {
+        .tech_lists,
+        .api_lists {
           margin-top: 10px !important;
           width: 60% !important;
 
@@ -422,13 +475,16 @@ export default {
       }
     }
 
-    #tech_container {
+    #tech_container,
+    #api_container {
       position: relative;
       margin-top: 55px;
       background-color: transparent !important;
 
-      #tech_wrapper {
-        .tech_lists {
+      #tech_wrapper,
+      #api_wrapper {
+        .tech_lists,
+        .api_lists {
           margin-top: 10px !important;
           width: 60% !important;
 
@@ -469,19 +525,22 @@ export default {
       }
     }
 
-    #tech_container {
+    #tech_container,
+    #api_container {
       position: relative;
       margin-top: 25px !important;
       background-color: transparent !important;
 
-      #tech_wrapper {
-        .tech_lists {
+      #tech_wrapper,
+      #api_wrapper {
+        .tech_lists,
+        .api_lists {
           margin-top: 10px !important;
           width: 100% !important;
 
           .tech_imgs {
             padding: 10px !important;
-            width: 100% !important;
+            width: 75% !important;
           }
         }
       }
