@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <footer>Made with <a href="https://v3.vuejs.org/" target="_blank">Vue.js</a></footer>
+    <footer>Made with <a href="https://v3.vuejs.org/" target="_blank">Vue 3</a></footer>
   </div>
 </template>
 

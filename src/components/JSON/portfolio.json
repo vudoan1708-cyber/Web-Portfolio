@@ -4,7 +4,7 @@
       {
         "title": "Cerberus",
         "description": "A Group Project Which Aims To Create A Browser-Based Front-end Interface for A&E Wristbands Project Handled By ",
-        "project_type": "Group",
+        "project_type": "Internship (Group)",
         "role": "Backend Developer",
         "images": {
           "thumbnail": "cerberus",
@@ -90,7 +90,7 @@
         },
         "technologies": [
           {
-            "name": "Vue.js",
+            "name": "Vue 3",
             "img": "vue",
             "link": "https://v3.vuejs.org/"
           },
