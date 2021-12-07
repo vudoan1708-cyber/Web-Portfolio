@@ -1,5 +1,6 @@
 <template>
-  <div class="project_wrapper" v-for="(project, projectKey) in projectsProp" :key="projectKey">
+  <div class="project_wrapper"
+  v-for="(project, projectKey) in displayableProjects" :key="projectKey">
     <div class="grid_display" @click="openWindow(project)">
       <ProjectDescription :description="project.description" :githubURL="project.github"
         :liveURL="project.live_url" :technologies="project.technologies"
@@ -14,6 +15,8 @@
 </template>
 
 <script>
+/* eslint-disable max-len */
+
 import { ref, watch } from 'vue';
 
 // Reusable Components
@@ -27,7 +30,7 @@ export default {
       type: Object,
     },
     projects: {
-      type: Array,
+      type: Object,
     },
     mobile: {
       type: Boolean,
@@ -40,7 +43,10 @@ export default {
   setup(props) {
     // Props
     const emitterObj = ref(props.emitter);
-    const projectsProp = ref(props.projects);
+    const displayableProjects = (props.projects.apps.length > 0 && props.projects.games.length > 0)
+      ? ref([...props.projects.apps, ...props.projects.games])
+      : ref([...props.projects.designs]);
+
     const isMobile = ref(props.mobile);
 
     function openWindow(project) {
@@ -49,11 +55,20 @@ export default {
     }
 
     watch(() => (props.projects), (data) => {
-      projectsProp.value = data;
+      displayableProjects.value = [];
+      if (data.apps.length > 0) {
+        displayableProjects.value = [...displayableProjects.value, ...data.apps];
+      }
+      if (data.games.length > 0) {
+        displayableProjects.value = [...displayableProjects.value, ...data.games];
+      }
+      if (data.designs.length > 0) {
+        displayableProjects.value = [...displayableProjects.value, ...data.designs];
+      }
     });
 
     return {
-      projectsProp,
+      displayableProjects,
       isMobile,
       openWindow,
     };

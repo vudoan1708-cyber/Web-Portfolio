@@ -63,7 +63,11 @@ export default {
     const mobile = ref(isMobile());
 
     // Apps
-    const projects = ref([]);
+    const projects = ref({
+      apps: [],
+      games: [],
+      designs: [],
+    });
 
     // Email Section
     const emailDetail = ref('');
@@ -73,14 +77,21 @@ export default {
 
     // Code or Design
     emitterObj.value.on('portfolio_view', (view) => {
-      projects.value = [];
+      projects.value = {
+        apps: [],
+        games: [],
+        designs: [],
+      };
       if (view === 'Code') {
         Portfolio.coding.apps.forEach((app) => {
-          projects.value.push(app);
+          projects.value.apps.push(app);
+        });
+        Portfolio.coding.games.forEach((game) => {
+          projects.value.games.push(game);
         });
       } else if (view === 'Design') {
-        Portfolio.design.forEach((app) => {
-          projects.value.push(app);
+        Portfolio.design.forEach((design) => {
+          projects.value.designs.push(design);
         });
       }
     });
@@ -98,7 +109,10 @@ export default {
 
     onBeforeMount(() => {
       Portfolio.coding.apps.forEach((app) => {
-        projects.value.push(app);
+        projects.value.apps.push(app);
+      });
+      Portfolio.coding.games.forEach((game) => {
+        projects.value.games.push(game);
       });
     });
 

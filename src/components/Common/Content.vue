@@ -18,7 +18,7 @@ export default {
       type: Object,
     },
     projects: {
-      type: Array,
+      type: Object,
     },
     mobile: {
       type: Boolean,

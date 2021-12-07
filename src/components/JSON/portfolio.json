@@ -621,16 +621,96 @@
     "games": [
       {
         "title": "Birdie Jump!!!",
-        "description": "",
+        "description": "A fun game which was inspired from the famous 'offline' dinosaur game with a little bit of a twist. The game contains two modes with different rules to explore and a leaderboard to compete with other players",
         "project_type": "Individual",
         "role": "Lead Developer",
         "images": {
           "thumbnail": "birdie_jump",
-          "progress": []
+          "progress": [
+            {
+              "title": "On Mobile",
+              "imgs": [
+                "birdie_login",
+                "birdie_welcoming_page",
+                "birdie_1mode",
+                "birdie_2mode"
+              ]
+            }
+          ]
         },
-        "technologies": [],
-        "github": "",
-        "live_url": "",
+        "technologies": [
+            {
+            "name": "p5.js",
+            "img": "p5",
+            "link": "https://p5js.org/"
+          },
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          }
+        ],
+        "github": "https://github.com/vudoan1708-cyber/Birdie-_Jump",
+        "live_url": {
+          "name": "Live URL",
+          "link": "https://birdiejump.herokuapp.com/"
+        },
+        "apis": [],
+        "extra_links": {
+          "presentations": [],
+          "videos": [],
+          "project_log": "",
+          "reports": []
+        },
+        "organisation": {
+          "nda": false,
+          "name": "",
+          "extra_links": ""
+        },
+        "timeline": {
+          "academic": "2018",
+          "isOnGoing": false
+        }
+      },
+      {
+        "title": "Turtle Race",
+        "description": "A racing game which was was originally made to raise awareness on the morality of animal abuse and animal sports betting activities with the use 3D renderings of the 3D modelled turtles, and a top-down perspective which gives a typical 2D racing game look",
+        "project_type": "Individual",
+        "role": "Lead Developer",
+        "images": {
+          "thumbnail": "turtle_race",
+          "progress": [
+            {
+              "title": "On Mobile",
+              "imgs": [
+                "turtle_race_enter",
+                "turtle_race_welcoming_page",
+                "turtle_race_countdown",
+                "turtle_race_1stage",
+                "turtle_race_transition",
+                "turtle_race_boss_intro",
+                "turtle_race_boss_fight"
+              ]
+            }
+          ]
+        },
+        "technologies": [
+            {
+            "name": "p5.js",
+            "img": "p5",
+            "link": "https://p5js.org/"
+          },
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          }
+        ],
+        "github": "https://github.com/vudoan1708-cyber/Birdie-_Jump",
+        "live_url": {
+          "name": "Live URL",
+          "link": "https://birdiejump.herokuapp.com/"
+        },
         "apis": [],
         "extra_links": {
           "presentations": [],
