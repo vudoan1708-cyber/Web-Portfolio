@@ -1,51 +1,22 @@
 {
   "name": "web-portfolio",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "concurrently --kill-others \"cd ./frontend && npm run serve\" \"cd ./backend && nodemon --exec go run cmd/main.go\""
   },
-  "dependencies": {
-    "@vue/runtime-core": "^3.0.5",
-    "core-js": "^3.6.5",
-    "emailjs-com": "^2.6.4",
-    "mitt": "^2.1.0",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vudoan1708-cyber/Web-Portfolio.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vudoan1708-cyber/Web-Portfolio/issues"
+  },
+  "homepage": "https://github.com/vudoan1708-cyber/Web-Portfolio#readme",
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-airbnb": "^5.0.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^7.0.0-0",
-    "node-sass": "^7.0.0",
-    "sass-loader": "^8.0.2"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "@vue/airbnb"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19"
+  }
 }
