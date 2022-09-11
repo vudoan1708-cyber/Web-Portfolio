@@ -24,8 +24,34 @@ type projectProxyBasic struct {
 	timeline     models.Timeline
 }
 
-func NewProject(object projectProxyBasic) (ProjectProxy, error) {
-	pf := object
+func NewProjectProxy(
+	title string,
+	description string,
+	project_type string,
+	role string,
+	images models.Image,
+	technologies []models.Technology,
+	github string,
+	live_url models.CommonObject,
+	apis []models.ExternalAPI,
+	extra_links models.ExtraLink,
+	organisation models.Organisation,
+	timeline models.Timeline,
+) (ProjectProxy, error) {
+	pf := projectProxyBasic{
+		title,
+		description,
+		project_type,
+		role,
+		images,
+		technologies,
+		github,
+		live_url,
+		apis,
+		extra_links,
+		organisation,
+		timeline,
+	}
 
 	return &pf, nil
 }

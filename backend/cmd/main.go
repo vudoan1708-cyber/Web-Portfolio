@@ -27,12 +27,13 @@ func main() {
 
 	backendPort := os.Getenv("BE_PORT")
 
-	resolver := resolvers.ResolverInstantiation()
-
 	// Handle command line arguments
 	dir := flag.String("dir", ".", "Define directory to the static files. Default to current directory")
 	ipAddr := flag.String("ip", "localhost", "Define the IP address that serves the app")
 	port := flag.String("port", backendPort, "Define the port that serves the app")
+	dataPath := flag.String("port", "", "Define the path to a JSON file")
+
+	resolver := resolvers.ResolverInstantiation(dataPath)
 
 	r := mux.NewRouter()
 	// This will serve files under http://localhost:8000/static/<filename>

@@ -1,26 +1,27 @@
 package resolvers
 
 import (
+	"log"
 	"portfolio/internal/core"
 )
 
 type Resolver struct {
 	// user factory
-	// UserFactory core.UserFactory
+	ProjectFactory core.ProjectFactory
 	// Array of Projects
 	Projects []core.ProjectProxy
 }
 
-func ResolverInstantiation() *Resolver {
-	// Instantiate a User Factory
-	// wf, err := core.NewUserFactory()
+func ResolverInstantiation(dataPath *string) *Resolver {
+	// Instantiate a Project Factory
+	pf, err := core.NewProjectFactory(*dataPath)
 
-	// if err != nil {
-	// 	log.Fatalf("Error when instantiating a user factory: %s", err)
-	// }
+	if err != nil {
+		log.Fatalf("Error when instantiating a user factory: %s", err)
+	}
 
 	resolver := &Resolver{
-		// UserFactory: *wf,
+		ProjectFactory: *pf,
 	}
 
 	return resolver
