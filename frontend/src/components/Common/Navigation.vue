@@ -70,7 +70,7 @@ export default {
         text-decoration: none;
         color: rgb(218, 218, 218);
         font-weight: normal;
-        transition: color .2s;
+        transition: color .2s ease-in-out, border-bottom .2s ease-in-out;
 
         &:hover {
           color: rgb(226, 91, 91);

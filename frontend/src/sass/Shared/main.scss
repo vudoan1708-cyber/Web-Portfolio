@@ -35,6 +35,19 @@ label {
   margin: 8px;
 }
 
+button {
+  padding: 8px;
+  border-radius: 2px;
+  background-color: rgb(255, 140, 99);
+  cursor: pointer;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .75);
+    color: white;
+  }
+}
+
 /* width of the entire scrollbar */
 ::-webkit-scrollbar,
 ::-webkit-scrollbar { /* Chrome/Opera/Safari */
