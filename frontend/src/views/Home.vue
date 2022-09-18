@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home">
     <Navigation />
     <Layout :emitter="emitter" />
     <ContactDetail :emitter="emitter" />

@@ -2,8 +2,80 @@
   "coding": {
     "apps": [
       {
+        "title": "Punchliner",
+        "description": "From May 31, 2022 - Jun 03, 2022, the project was initiated as an <i>individual project</i>, where a distraction-free text editor which has the ability to <b>type</b>, to <b>hide text</b>, to <b>reveal text</b> on mouse hover and mouse click needed implementing.<br /><br />A month later, as it needed to grow with more features such as account management system, document overview, storage and premium membership, another backend developer joined the team and we worked together to help the client bring his vision to life.<br /><br />The appearance of the application was wished to replicate that of another text editor programme called <a href=\"https://writer.bighugelabs.com/\" target=\"_blank\">Writer</a>",
+        "project_type": "Freelance (Individual and Group)",
+        "role": "Frontend Developer",
+        "images": {
+          "thumbnail": "punchliner",
+          "progress": [
+            {
+              "title": "On Mobile",
+              "imgs": [
+                "punchliner_homepage",
+                "punchliner_register",
+                "punchliner_login",
+                "punchliner_editor",
+                "punchliner_share_docs",
+                "punchliner_premium",
+                "punchliner_stripe"
+              ]
+            }
+          ]
+        },
+        "technologies": [
+          {
+            "name": "Svelte",
+            "img": "svelte",
+            "link": "https://svelte.dev/"
+          },
+          {
+            "name": "Typescript",
+            "img": "typescript",
+            "link": "https://www.typescriptlang.org/"
+          },
+          {
+            "name": "Node.js",
+            "img": "node",
+            "link": "https://nodejs.org/en/"
+          },
+          {
+            "name": "Sass",
+            "img": "scss",
+            "link": "https://sass-lang.com/"
+          },
+          {
+            "name": "Supabase",
+            "img": "supabase",
+            "link": "https://supabase.com/"
+          }
+        ],
+        "github": "https://github.com/vudoan1708-cyber/Punchliner.app",
+        "live_url": {
+          "name": "Live URL",
+          "link": "https://punchliner.app/"
+        },
+        "apis": [],
+        "extra_links": {
+          "presentations": [],
+          "videos": [],
+          "project_log": "",
+          "reports": []
+        },
+        "organisation": {
+          "nda": false,
+          "name": "",
+          "extra_links": ""
+        },
+        "timeline": {
+          "academic": "May 31, 2022 - Sep 16, 2022",
+          "isOnGoing": false
+        }
+      },
+
+      {
         "title": "Cerberus",
-        "description": "A Group Project Which Aims To Create A Browser-Based Front-end Interface for A&E Wristbands Project Handled By ",
+        "description": "A Group Project which aims to create a browser-based front-end interface for A&E Wristbands project handled by <a href=\"https://cerberus-laboratories.com/\" target=\"_blank\">The Cerberus Security Laboratories Team</a>",
         "project_type": "Internship (Group)",
         "role": "Backend Developer",
         "images": {

@@ -9,12 +9,7 @@
       </section>
       <!-- Description -->
       <section id="project_desc" v-if="detail.desc !== ''">
-        <p>{{ detail.desc }}
-          <a v-if="detail.organisation.name !== '' && detail.organisation.extra_links !== ''"
-            :href="detail.organisation.extra_links"
-            target="_blank">{{ detail.organisation.name }}
-          </a>
-        </p>
+        <p v-html="detail.desc"></p>
       </section>
       <!-- Image -->
       <section class="image_container" v-if="detail.images.thumbnail !== ''">

@@ -45,7 +45,7 @@ func (pf *ProjectFactory) NewProject(object models.Project) (ProjectProxy, error
 	}
 
 	// This will be the Proxy File to parse a JSON file
-	return NewProjectProxy(
+	return NewProjectProxyFile(
 		object.Title,
 		object.Description,
 		object.ProjectType,

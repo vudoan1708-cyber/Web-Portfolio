@@ -1,7 +1,7 @@
 <template>
   <div class="descriptions">
     <!-- NDA Icon -->
-    <section v-if="projectDetails.orgNDA" class="nda">
+    <section v-if="projectDetails.orgNDA" class="nda" title="Non Disclosure Agreement Signed">
       <img src="@/assets/logos/NDA.png" />
     </section>
 
@@ -19,8 +19,7 @@
 
       <section>
         <h4>Description: </h4>
-          <p>{{ projectDetails.description }} {{ projectDetails.orgName }}
-          </p> <br />
+          <p v-html="projectDetails.description"></p> <br />
       </section>
 
       <section>
@@ -214,21 +213,77 @@ export default {
 @media screen and (max-width: 600px) {
   .descriptions {
     font-size: 12px;
+    overflow-y: auto;
+    height: 250px;
 
     .nda {
       top: -5% !important;
       width: 7% !important;
     }
   }
+
+  /* width of the entire scrollbar */
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar { /* Chrome/Opera/Safari */
+      width: 4px;
+  }
+  ::-moz-scrollbar,
+  ::-webkit-scrollbar { /* Firefox 19+ */
+      width: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgb(214, 105, 105);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(204, 46, 46);
+    border-radius: 2px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(204, 46, 46);;
+  }
 }
 @media screen and (max-width: 460px) {
   .descriptions {
     font-size: 9px;
+    overflow-y: auto;
+    height: 120px;
 
     .nda {
       top: -5% !important;
       width: 7% !important;
     }
+  }
+
+  /* width of the entire scrollbar */
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar { /* Chrome/Opera/Safari */
+      width: 4px;
+  }
+  ::-moz-scrollbar,
+  ::-webkit-scrollbar { /* Firefox 19+ */
+      width: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgb(214, 105, 105);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(204, 46, 46);
+    border-radius: 2px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(204, 46, 46);;
   }
 }
 </style>

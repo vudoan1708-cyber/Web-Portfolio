@@ -13,6 +13,9 @@
       <div class="img_container" id="github" @click="openNewTab(Contact.github)">
         <img src="@/assets/logos/github.png" />
       </div>
+      <div class="img_container" id="fiverr" @click="openNewTab(Contact.fiverr)">
+        <img src="@/assets/logos/fiverr.png" />
+      </div>
     </div>
 
     <Headers />

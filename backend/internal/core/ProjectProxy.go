@@ -76,3 +76,55 @@ func (pf *projectProxyBasic) Get() (models.Project, error) {
 
 	return mPortfolio, nil
 }
+
+// Proxy File
+type ProjectProxyFile interface {
+	Get() (models.Project, error)
+}
+
+type projectProxyFile struct {
+	title        string
+	description  string
+	project_type string
+	role         string
+	images       models.Image
+	technologies []models.Technology
+	github       string
+	live_url     models.CommonObject
+	apis         []models.ExternalAPI
+	extra_links  models.ExtraLink
+	organisation models.Organisation
+	timeline     models.Timeline
+}
+
+func NewProjectProxyFile(
+	title string,
+	description string,
+	project_type string,
+	role string,
+	images models.Image,
+	technologies []models.Technology,
+	github string,
+	live_url models.CommonObject,
+	apis []models.ExternalAPI,
+	extra_links models.ExtraLink,
+	organisation models.Organisation,
+	timeline models.Timeline,
+) (ProjectProxyFile, error) {
+	pf := projectProxyFile{
+		title,
+		description,
+		project_type,
+		role,
+		images,
+		technologies,
+		github,
+		live_url,
+		apis,
+		extra_links,
+		organisation,
+		timeline,
+	}
+
+	return &pf, nil
+}
