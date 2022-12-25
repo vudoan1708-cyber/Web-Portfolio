@@ -14,8 +14,14 @@
 
     <div class="json_wrapper" v-else>
       <h2>JSON file content</h2>
-      <textarea id="json" v-html="JSON.stringify(Portfolio, null, 2)"></textarea>
-      <button @click="saveJson">Save</button>
+      <textarea
+        id="json"
+        wrap="soft"
+        v-model="portfolioContent" />
+      <div class="button_wrapper">
+        <button @click="revertChanges">Revert</button>
+        <button @click="saveJson">Save</button>
+      </div>
     </div>
 
     <div v-if="!!error.message || !!error.detail">
@@ -30,6 +36,8 @@ import {
   onBeforeMount, onMounted, reactive, ref,
 } from 'vue';
 
+import path from 'path';
+
 import ADMIN_CODE from '@/components/Utils/constants';
 
 import Portfolio from '@/components/JSON/portfolio.json';
@@ -40,6 +48,9 @@ export default {
     const codes = ref(ADMIN_CODE);
     const randomInputs = ref([]);
     const inputtedCode = ref([]);
+
+    const prevPortfolioContent = ref(JSON.stringify(Portfolio, null, 2));
+    const portfolioContent = ref(JSON.stringify(Portfolio, null, 2));
 
     const reveal = ref(false);
     const error = reactive({
@@ -82,7 +93,11 @@ export default {
     };
 
     const saveJson = () => {
+      console.log(path.join(__dirname, '../components', 'JSON', 'portfolio.json'), portfolioContent.value);
+    };
 
+    const revertChanges = () => {
+      portfolioContent.value = prevPortfolioContent.value;
     };
 
     // Life Cycles
@@ -100,11 +115,14 @@ export default {
       inputtedCode,
       error,
       reveal,
+      portfolioContent,
+      prevPortfolioContent,
 
       Portfolio,
 
       onInput,
       saveJson,
+      revertChanges,
     };
   },
 };
@@ -147,6 +165,7 @@ export default {
       position: relative;
       width: 100%;
       height: 100%;
+      margin-top: calc(8px * 3);
 
       #json {
         position: relative;
@@ -168,6 +187,12 @@ export default {
         word-wrap: break-word;
         white-space: pre-wrap;
         font-feature-settings: "liga" 0;
+      }
+
+      .button_wrapper {
+        display: flex;
+        justify-content: center;
+        gap: calc(8px / 2);
       }
     }
   }

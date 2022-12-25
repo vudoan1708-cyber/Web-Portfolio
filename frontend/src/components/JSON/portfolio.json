@@ -328,7 +328,7 @@
         "github": "https://github.com/vudoan1708-cyber/Air-Quality",
         "live_url": {
           "name": "Live URL",
-          "link": "https://airpollutants.herokuapp.com/"
+          "link": "https://airpollutants.glitch.me/"
         },
         "apis": [
           {
@@ -513,7 +513,7 @@
         "github": "https://github.com/vudoan1708-cyber/Botanism",
         "live_url": {
           "name": "Live URL",
-          "link": "https://botanism.herokuapp.com/"
+          "link": "https://botanism.glitch.me/"
         },
         "apis": [
           {
@@ -664,7 +664,7 @@
         "github": "https://github.com/vudoan1708-cyber/Coronavirus",
         "live_url": {
           "name": "Live URL",
-          "link": "https://wwcoronavirus.herokuapp.com/"
+          "link": "https://wwcoronavirus.glitch.me/"
         },
         "apis": [
           {
@@ -725,7 +725,7 @@
         "github": "https://github.com/vudoan1708-cyber/Birdie-_Jump",
         "live_url": {
           "name": "Live URL",
-          "link": "https://birdiejump.herokuapp.com/"
+          "link": "https://birdiejump.glitch.me/"
         },
         "apis": [],
         "extra_links": {
@@ -778,10 +778,10 @@
             "link": "https://nodejs.org/en/"
           }
         ],
-        "github": "https://github.com/vudoan1708-cyber/Birdie-_Jump",
+        "github": "https://github.com/vudoan1708-cyber/Turtle-Race",
         "live_url": {
           "name": "Live URL",
-          "link": "https://birdiejump.herokuapp.com/"
+          "link": "https://turtlerace.glitch.me/"
         },
         "apis": [],
         "extra_links": {

@@ -4,4 +4,15 @@ module.exports = {
       .test(/\.pdf$/)
       .use('file-loader').loader('file-loader');
   },
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.mjs$/,
+          include: /node_modules/,
+          type: "javascript/auto"
+        }
+      ] 
+    }
+  },
 };

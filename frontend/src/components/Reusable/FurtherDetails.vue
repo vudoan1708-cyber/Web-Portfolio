@@ -202,7 +202,7 @@ export default {
     onMounted(() => {
       if (detail.images.progress.length > 0) {
         for (let i = 0; i < detail.images.progress.length; i += 1) {
-          createGridDisplay(detail.images.progress, i, 'imgs', mobileDesignVersionRef.value);
+          createGridDisplay(detail.images.progress, i, 'imgs', mobileDesignVersionRef.value[0]);
         }
       }
 
@@ -216,8 +216,8 @@ export default {
         if (detail.apis.length === 1 && detail.apis[0].img !== '') {
           // eslint-disable-next-line no-unused-expressions
           !isMobile.value
-            ? apiImgRef.value.setAttribute('style', 'width: 15%')
-            : apiImgRef.value.setAttribute('style', 'width: 25%');
+            ? apiImgRef.value[0].setAttribute('style', 'width: 15%')
+            : apiImgRef.value[0].setAttribute('style', 'width: 25%');
         }
         for (let i = 0; i < detail.apis.length; i += 1) {
           createGridDisplay(detail.apis, i, 'img', apiRef.value);
