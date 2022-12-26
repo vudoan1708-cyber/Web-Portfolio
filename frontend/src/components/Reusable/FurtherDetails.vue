@@ -34,7 +34,10 @@
       <section id="tech_container"
         v-if="detail.technologies.length > 0">
         <h2>Technologies</h2>
-        <div id="tech_wrapper" ref="techRef">
+        <div
+          id="tech_wrapper"
+          :class="{ minContent: detail.technologies.length === 1 }"
+          ref="techRef">
           <div class="tech_lists"
             v-for="(tech, techKey) in detail.technologies" :key="techKey">
             <a :href="tech.link" target="_blank">
@@ -49,7 +52,7 @@
       <section id="api_container"
         v-if="detail.apis.length > 0">
         <h2>APIs</h2>
-        <div id="api_wrapper" ref="apiRef">
+        <div id="api_wrapper" :class="{ minContent: detail.apis.length === 1 }" ref="apiRef">
           <div class="api_lists"
             v-for="(api, apiKey) in detail.apis" :key="apiKey">
             <a v-if="api.name !== 'Internal API' && api.img !== ''"
@@ -364,7 +367,6 @@ export default {
     #links_group {
       position: relative;
       display: flex;
-      flex-direction: row;
       align-items: center;
       justify-content: center;
 
@@ -435,7 +437,11 @@ export default {
 
           .tech_imgs {
             padding: 10px !important;
-            width: 50% !important;
+            width: 100% !important;
+          }
+
+          .api_imgs {
+            width: 100% !important;
           }
         }
       }
@@ -445,7 +451,7 @@ export default {
       margin: 10px !important;
 
       .icon_container {
-        width: 75% !important;
+        width: 30% !important;
       }
     }
   }
@@ -474,10 +480,12 @@ export default {
     #api_container {
       position: relative;
       margin-top: 55px;
-      background-color: transparent !important;
+      // background-color: transparent !important;
 
       #tech_wrapper,
       #api_wrapper {
+        grid-template-columns: repeat(auto-fill, 50%) !important;
+
         .tech_lists,
         .api_lists {
           margin-top: 10px !important;
@@ -485,25 +493,36 @@ export default {
 
           .tech_imgs {
             padding: 10px !important;
-            width: 50% !important;
           }
+        }
+      }
+
+      #tech_wrapper.minContent,
+      #api_wrapper.minContent {
+        grid-template-columns: repeat(auto-fill, 100%) !important;
+
+        .tech_imgs {
+          width: 50% !important;
+        }
+
+        .api_imgs {
+          width: 50% !important;
         }
       }
     }
 
     #links_group {
+      flex-flow: row wrap;
       margin: 10px !important;
 
       .icon_container {
-        width: 50% !important;
+        width: 40% !important;
       }
     }
   }
 }
 @media screen and (max-width: 460px) {
   #details {
-    font-size: 7px;
-
     section {
       margin: 8px !important;
     }
@@ -524,7 +543,7 @@ export default {
     #api_container {
       position: relative;
       margin-top: 25px !important;
-      background-color: transparent !important;
+      // background-color: transparent !important;
 
       #tech_wrapper,
       #api_wrapper {
@@ -535,7 +554,6 @@ export default {
 
           .tech_imgs {
             padding: 10px !important;
-            width: 75% !important;
           }
         }
       }
@@ -545,7 +563,7 @@ export default {
       margin: 2.5px !important;
 
       .icon_container {
-        width: 25% !important;
+        width: 50% !important;
       }
     }
   }

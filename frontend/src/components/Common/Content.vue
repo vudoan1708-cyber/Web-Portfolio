@@ -54,7 +54,6 @@ export default {
   left: 0;
   width: 80%;
   height: auto;
-  min-height: 100% !important;
   padding: 20px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="layout" v-if="emailDetail === ''">
+  <div class="layout" v-if="emailDetail === '' && !furtherDetail">
     <Introduction />
     <Content :emitter="emitterObj" :projects="projects" :mobile="mobile" />
     <Blogs />
@@ -11,7 +11,7 @@
     <Email />
   </div>
 
-  <div class="layout" v-if="furtherDetail !== null">
+  <div class="layout" v-else-if="furtherDetail !== null">
     <FurtherDetails :emitter="emitterObj" :furtherDetail="furtherDetail" :mobile="mobile" />
   </div>
 </template>
@@ -129,7 +129,7 @@ export default {
 
 <style lang="scss" scoped>
 .layout {
-  position: absolute;
+  position: relative;
   display: block;
   top: 0;
   left: 20%;

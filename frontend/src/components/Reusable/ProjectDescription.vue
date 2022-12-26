@@ -250,7 +250,7 @@ export default {
 }
 @media screen and (max-width: 460px) {
   .descriptions {
-    font-size: 9px;
+    font-size: 10px;
     overflow-y: auto;
     height: 120px;
 

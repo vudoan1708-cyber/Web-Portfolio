@@ -116,13 +116,11 @@ export default {
 }
 @media screen and (max-width: 460px) {
   #nav {
-    width: 84%;
-
     #els {
-      padding: 15px;
+      padding: 12px;
 
       .nav_el {
-        font-size: 10px !important;
+        font-size: 12px !important;
       }
     }
   }

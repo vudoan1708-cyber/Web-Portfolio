@@ -82,7 +82,7 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .headers {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 460px) {

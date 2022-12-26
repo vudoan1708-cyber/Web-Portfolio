@@ -80,10 +80,13 @@ export default {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 40px;
 
     .img_container {
-      width: 20%;
-      margin: 40px;
+      width: 50px;
       cursor: pointer;
 
       img {
@@ -96,6 +99,25 @@ export default {
           filter: invert(100%);
         }
       }
+    }
+  }
+}
+
+/* Responsive Text */
+@media screen and (max-width: 770px) {
+  #outer_wrapper {
+    .img_container {
+      width: 35px !important;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  #outer_wrapper {
+    gap: 32px !important;
+    margin-left: 25px !important;
+
+    .img_container {
+      width: 25px !important;
     }
   }
 }
