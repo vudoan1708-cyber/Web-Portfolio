@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Navigation />
+    <Navigation :emitter="emitter" />
     <Layout :emitter="emitter" />
     <ContactDetail :emitter="emitter" />
   </div>

@@ -2,19 +2,19 @@
   <div id="nav">
     <ul id="els">
       <li class="nav_el" :class="selected === 'home' ? 'selected' : 'not_selected'"
-          @click="() => { selectNavItem('home') }">
+          @click="() => { selectNavItem('home'); }">
         <a href="#intro">Home</a>
       </li>
       <li class="nav_el" :class="selected === 'portfolio' ? 'selected' : 'not_selected'"
-          @click="() => { selectNavItem('portfolio') }">
+          @click="() => { selectNavItem('portfolio'); }">
         <a href="#content">Portfolio</a>
       </li>
       <li class="nav_el" :class="selected === 'blog' ? 'selected' : 'not_selected'"
-          @click="() => { selectNavItem('blog') }">
+          @click="() => { selectNavItem('blog'); }">
         <a href="#blogs">Blog</a>
       </li>
       <li class="nav_el" :class="selected === 'resume' ? 'selected' : 'not_selected'"
-          @click="() => { selectNavItem('resume') }">
+          @click="() => { selectNavItem('resume'); }">
         <a href="#resume">Resume</a>
       </li>
     </ul>
@@ -26,10 +26,18 @@ import { ref } from 'vue';
 
 export default {
   name: 'Navigation',
-  setup() {
+  props: {
+    emitter: {
+      type: Object,
+    },
+  },
+  setup(props) {
     const selected = ref('home');
 
     const selectNavItem = (item) => {
+      props.emitter.emit('project_card', null);
+      props.emitter.emit('email_screen', '');
+
       selected.value = item;
     };
 

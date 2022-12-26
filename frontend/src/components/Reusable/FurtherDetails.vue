@@ -430,6 +430,8 @@ export default {
 
       #tech_wrapper,
       #api_wrapper {
+        grid-template-columns: repeat(auto-fill, 25%) !important;
+
         .tech_lists,
         .api_lists {
           margin-top: 10px !important;
@@ -443,6 +445,19 @@ export default {
           .api_imgs {
             width: 100% !important;
           }
+        }
+      }
+
+      #tech_wrapper.minContent,
+      #api_wrapper.minContent {
+        grid-template-columns: repeat(auto-fill, 100%) !important;
+
+        .tech_imgs {
+          width: 50% !important;
+        }
+
+        .api_imgs {
+          width: 30% !important;
         }
       }
     }
@@ -493,13 +508,17 @@ export default {
 
           .tech_imgs {
             padding: 10px !important;
+            width: 80% !important;
+          }
+
+          .api_imgs {
+            width: 100% !important;
           }
         }
       }
 
       #tech_wrapper.minContent,
       #api_wrapper.minContent {
-        grid-template-columns: repeat(auto-fill, 100%) !important;
 
         .tech_imgs {
           width: 50% !important;
