@@ -1,5 +1,9 @@
 <template>
-  <div class="headers" v-for="(title, titleKey) in titles.portfolio" :key="titleKey"
+  <div
+    v-for="(title, titleKey) in titles.portfolio"
+    class="headers"
+    :class="selected === title.toLowerCase() ? 'selected' : 'not_selected'"
+    :key="titleKey"
     @click="changeView(title)">
     <a href="#content">
       <h2>{{ title }}</h2>
@@ -24,12 +28,15 @@ export default {
       portfolio: [],
       blog: [],
     });
+    const selected = ref('code');
 
     // Emitter
     const emitter = ref(useStore('emitter'));
 
     // Code or Design
     function changeView(title) {
+      // New selection
+      selected.value = title.toLowerCase();
       if (!emitter.value.err) {
         emitter.value.store.emit('portfolio_view', title);
       }
@@ -46,6 +53,7 @@ export default {
 
     return {
       titles,
+      selected,
       changeView,
     };
   },
@@ -70,6 +78,10 @@ export default {
   }
 
   &:hover {
+    width: 20%;
+  }
+
+  &.selected {
     width: 20%;
   }
 }
