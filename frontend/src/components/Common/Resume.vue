@@ -3,7 +3,7 @@
     <h1>RESUME</h1> <br />
     <div id="embeded">
       <p>Open the CV file in another
-        <a href="https://drive.google.com/file/d/1wyAXjZjKpD2Ph2fsbXTSBBFAuy_pwJtO/view?usp=sharing" target="_blank">window</a>
+        <a href="https://drive.google.com/file/d/1Kj4nfXxnBso_lUD-N2Iy1NrAusrFF66B/view?usp=drive_link" target="_blank">window</a>
       </p> <br />
       <iframe :src="CV" width="100%" height="750px">
       </iframe>

@@ -28,7 +28,8 @@ export default {
   top: 15%;
   width: 80%;
   padding: 20px;
-  color: snow;
+  color: rgb(44, 44, 44);
+  background-color: rgba(226, 91, 91, 0.5);
 
   .intro_contents {
     text-align: left;
